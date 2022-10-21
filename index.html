@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/mediaquerys.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.ico" />
+    <title>GamesBA</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html"
+        ><h1 class="header__title">Games<span class="header__title--span">BA</span></h1></a
+      >
+      <nav>
+        <ul class="navList">
+          <li class="navList_item">Inicio</li>
+          <span class="navList__divider"></span>
+          <li class="navList_item">Catalogo</li>
+          <span class="navList__divider"></span>
+          <li class="navList_item">Pre-orden</li>
+          <span class="navList__divider"></span>
+          <li class="navList_item">Próximos lanzamientos</li>
+          <span class="navList__divider"></span>
+          <li class="navList_item">Blog</li>
+        </ul>
+      </nav>
+      <!-- <div>
+        <input type="text" placeholder="Buscar un videojuego..." />
+      </div> -->
+      <div class="login">
+        <label for="login__toggle" class="login__label">
+          <img src="./assets/icons/user.svg" class="login--btn" />
+          <img src="./assets/icons/downArrow.svg" />
+        </label>
+        <input type="checkbox" id="login__toggle" />
+        <div class="login__containerBtn">
+          <p class="login__btn">Registrarse</p>
+          <span class="login__divider"></span>
+          <p class="login__btn">Iniciar sesión</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="landing">
+        <div class="hero">
+          <h3 class="hero__title">Silent hill 2 <span>Remake</span></h3>
+          <p class="hero__overview">
+            “En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
+            allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
+            especial" esperándote...”.
+          </p>
+          <div class="containerBtn">
+            <button class="containerBtn__btn">Reservar</button>
+            <button class="containerBtn__btn">Añadir a deseados</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="trendingGames">
+        <div class="title">
+          <span class="title__divider"></span>
+          <h3>Tendencias</h3>
+        </div>
+        <div class="cardTrending">
+          <div class="cardTrending__container">
+            <div class="container__zoom">
+              <img src="./assets/trending/aplagetale.jpg" alt="A plague tale Requiem" />
+            </div>
+            <div class="container__header">
+              <h3>A plague tale: Requiem</h3>
+              <i class="fa-solid fa-heart container__icon"></i>
+            </div>
+            <div class="container__footer">
+              <h3>$6.000</h3>
+              <h3>$7.200</h3>
+            </div>
+          </div>
+          <div class="cardTrending__container">
+            <div class="container__zoom">
+              <img src="./assets/trending/bayonetta3.jpg" alt="A plague tale Requiem" />
+            </div>
+            <div class="container__header">
+              <h3>Bayonetta 3</h3>
+              <i class="fa-solid fa-heart container__icon"></i>
+            </div>
+            <div class="container__footer">
+              <h3>$8.600</h3>
+            </div>
+          </div>
+          <div class="cardTrending__container">
+            <div class="container__zoom">
+              <img src="./assets/trending/cod2.png" alt="Call of Duty Modern Warfare 2" />
+            </div>
+            <div class="container__header">
+              <h3>Call of Duty Modern Warfare 2</h3>
+              <i class="fa-solid fa-heart container__icon"></i>
+            </div>
+            <div class="container__footer">
+              <h3>$9.400</h3>
+            </div>
+          </div>
+          <div class="cardTrending__container">
+            <div class="container__zoom">
+              <img src="./assets/trending/dragonball.jpg" alt="Dragon Ball: The Breakers" />
+            </div>
+            <div class="container__header">
+              <h3>Dragon Ball: The Breakers</h3>
+              <i class="fa-solid fa-heart container__icon"></i>
+            </div>
+            <div class="container__footer">
+              <h3>$3.200</h3>
+              <h3>$3.700</h3>
+            </div>
+          </div>
+          <div class="cardTrending__container">
+            <div class="container__zoom">
+              <img
+                src="./assets/trending/uncharted.png"
+                alt="Uncharted Legacy of Thieves Collection"
+              />
+            </div>
+            <div class="container__header">
+              <h3>Uncharted Legacy of Thieves Collection</h3>
+              <i class="fa-solid fa-heart container__icon"></i>
+            </div>
+            <div class="container__footer">
+              <h3>$7.200</h3>
+              <h3>$7.900</h3>
+            </div>
+          </div>
+          <div class="cardTrending__container">
+            <div class="container__zoom">
+              <img
+                src="./assets/trending/fifa23.jpg"
+                alt="Uncharted Legacy of Thieves Collection"
+              />
+            </div>
+            <div class="container__header">
+              <h3>Fifa 23</h3>
+              <i class="fa-solid fa-heart container__icon"></i>
+            </div>
+            <div class="container__footer">
+              <h3>$8.300</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="dividerSeparator">
+        <div class="dividerSeparator__container">
+          <div class="containerBox">
+            <img src="./assets/icons/download.svg" />
+            <div class="containerBox__text">
+              <h3>Súper rápido</h3>
+              <h4>Descarga digital instantánea</h4>
+            </div>
+          </div>
+          <div class="dividerSeparator__dividerLine"></div>
+          <div class="containerBox">
+            <img src="./assets/icons/shield.svg" />
+            <div class="containerBox__text">
+              <h3>Fiable y seguro</h3>
+              <h4>Más de 10.000 juegos</h4>
+            </div>
+          </div>
+          <div class="dividerSeparator__dividerLine"></div>
+          <div class="containerBox">
+            <img src="./assets/icons/chat.svg" />
+            <div class="containerBox__text">
+              <h3>Atención al cliente</h3>
+              <h4>Agente disponible 24/7</h4>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/ReynaMod.png" class="dividerSeparator__pj" />
+      </div>
+
+      <section id="inComing"></section>
+
+      <div class="divider"></div>
+
+      <section id="newGames"></section>
+
+      <div class="divider"></div>
+
+      <section id="popularCategories"></section>
+
+      <div class="divider"></div>
+
+      <section id="lastestNews"></section>
+
+      <div class="divider"></div>
+
+      <section id="newsletter"></section>
+    </main>
+    <footer>
+      <div>
+        <div>
+          <h3>Gamestore</h3>
+          <ul>
+            <li>Metodos de pago</li>
+            <li>Soporte técnico</li>
+            <li>Términos de servicio</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Información</h3>
+          <ul>
+            <li>Sobre nosotros</li>
+            <li>Como comprar</li>
+            <li>Sistema de reembolsos</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Comunidad</h3>
+          <ul>
+            <li>Blog</li>
+            <li>Sorteos</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li>+054 1122334455</li>
+            <li>Ventas@gamestore.com.ar</li>
+            <li>Atencionclientes@gamestore.com.ar</li>
+          </ul>
+        </div>
+      </div>
+      <p>Copyright © 2022 Gamestore | Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
