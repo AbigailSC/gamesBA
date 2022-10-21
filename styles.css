@@ -1,0 +1,352 @@
+:root {
+  --background: #192233;
+  --backgroundActive: #25324a;
+  --backgroundBox: #121926;
+  --textPrimary: #ffffff;
+  --textDegradatePrimary: #6F3DCC;
+  --textDegradateSecundary: #4786E8;
+  --textSecondary: #8292a6;
+  --size: 50px;   /* size of the cut */
+  --gap: 10px;    /* the gap */
+  --angle: 90deg; /* angle of the arrow */
+  background-color: var(--background);
+  color: var(--textPrimary);
+  font-family: 'Khand', sans-serif;
+}
+
+*{
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+  /* border:1px solid red; */
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: var(--backgroundBox); */
+  padding: 2em 4em;
+  position: fixed;
+  height: 90px;
+  z-index: 10;
+}
+
+.header__title{
+  font-size: 1em;
+  letter-spacing: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header__title--span {
+  background: linear-gradient(180deg, var(--textDegradatePrimary), var(--textDegradateSecundary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navList{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.navList__divider{
+  border-right: 1px solid var(--textPrimary);
+  opacity: .3;
+  height: 18px;
+}
+
+.navList_item{
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navList_item:hover{
+  color: var(--textSecondary);
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.login__containerBtn{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-right: 4em;
+  text-align: center;
+  z-index: 10;
+  display: none;
+}
+
+.login__label{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.login__label:hover{
+  background-color: rgba(130, 146, 165, 0.3);
+}
+
+#login__toggle{
+  display: none;
+}
+
+#login__toggle:checked + .login__containerBtn{
+  display: flex;
+}
+
+.login__divider{
+  border-bottom: 1px solid var(--textSecondary);
+  opacity: .4;
+}
+
+.login__btn{
+  background-color: var(--background);
+  color: var(--textPrimary);
+  padding: 8px 12px;
+  outline: inherit;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.login__btn:hover{
+  background-color: var(--backgroundActive);
+}
+
+#landing {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../assets/silentHill2Remake.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 520px 80px -460px rgb(16 16 16/50%);
+  clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 60px));
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  padding: 0 4em;
+  gap: 1em;
+}
+
+.hero__title{
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.hero__title span {
+  background: linear-gradient(180deg, var(--textDegradatePrimary), var(--textDegradateSecundary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__overview{
+  font-size: 24px;
+}
+
+.containerBtn{
+  display: flex;
+  gap: 1em;
+  border-radius: 12px;
+}
+
+.containerBtn__btn{
+  background-color: var(--textDegradatePrimary);
+  padding: 1em 2em;
+  border-radius: 1em;
+  cursor: pointer;
+  border: 2px solid var(--textDegradatePrimary);
+  transition: 0.2s;
+}
+
+.containerBtn__btn:nth-child(2){
+  background-color: transparent ;
+  border: 2px solid var(--textDegradatePrimary);
+}
+
+.containerBtn__btn:hover{
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* trendingGames */
+
+#trendingGames{
+  padding: 2em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 4em;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+.title__divider{
+  margin-bottom: 4px;
+  border-right: 3px solid;
+  border-image: linear-gradient(to bottom, var(--textDegradatePrimary), var(--textDegradateSecundary)) 1;
+  height: 20px;
+}
+
+.cardTrending{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cardTrending__container{
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container__zoom{
+  overflow: hidden;
+  height: 400px;
+  width: 280px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.container__zoom img{
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.container__zoom img:hover{
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.container__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.container__header h3{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.container__header h3:hover{
+  color: var(--textSecondary);
+}
+
+.container__footer{
+  display: flex;
+  gap: 8px;
+}
+
+.container__footer h3:nth-child(2){
+  color: var(--textSecondary);
+  text-decoration: line-through;
+}
+
+.container__icon{
+  color: var(--textPrimary);
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.container__icon:hover{
+  color: var(--textDegradatePrimary);
+}
+
+/* divider */
+
+.dividerSeparator{
+  width: 100%;
+  background-color: var(--backgroundBox);
+  padding: 0 4em;
+  display: flex;
+  position: relative;
+  height: 200px;
+}
+
+.dividerSeparator__pj{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 260px;
+  padding-right: 4em;
+}
+
+.dividerSeparator__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: calc(100% - 320px);
+  align-items: center;
+  gap: 2em;
+  /* background-color: #4786E8; */
+}
+
+.dividerSeparator__dividerLine{
+  border-right: 2px solid var(--textSecondary);
+  height: 100px;
+  opacity: .4;
+  border-radius: 12;
+}
+
+.containerBox{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.containerBox img{
+  width: 80px;
+  height: 80px;
+}
+
+.containerBox__text{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.containerBox__text h3{
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+.containerBox__text h4{
+  color: var(--textSecondary);
+}
