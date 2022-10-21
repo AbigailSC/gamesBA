@@ -2,6 +2,7 @@
   --background: #192233;
   --backgroundActive: #25324a;
   --backgroundBox: #121926;
+  --backgroundBoxGradient: #1b283e;
   --textPrimary: #ffffff;
   --textDegradatePrimary: #6F3DCC;
   --textDegradateSecundary: #4786E8;
@@ -29,10 +30,11 @@
   display: flex;
   justify-content: space-between;
   /* background-color: var(--backgroundBox); */
-  padding: 2em 4em;
+  padding: 2em 8em;
   position: fixed;
   height: 90px;
   z-index: 10;
+  
 }
 
 .header__title{
@@ -83,7 +85,7 @@
   display: flex;
   flex-direction: column;
   width: 200px;
-  margin-right: 4em;
+  margin-right: 8em;
   text-align: center;
   z-index: 10;
   display: none;
@@ -146,8 +148,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
-  padding: 0 4em;
+  width: 50%;
+  padding: 0 8em;
   gap: 1em;
 }
 
@@ -195,11 +197,38 @@
 /* trendingGames */
 
 #trendingGames{
-  padding: 2em 4em;
+  padding: 2em 8em;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-bottom: 4em;
+  
+}
+
+.trendingGames__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.trendingGames__header__btn{
+  display: flex;
+  gap: 1em;
+  
+}
+
+.trendingGames__header__btn i{
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.trendingGames__header__btn i:hover{
+  color: var(--textSecondary);
+}
+
+.trendingGames__header__btn i:active{
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .title{
@@ -215,27 +244,32 @@
   border-right: 3px solid;
   border-image: linear-gradient(to bottom, var(--textDegradatePrimary), var(--textDegradateSecundary)) 1;
   height: 20px;
+  
 }
 
 .cardTrending{
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
 }
 
 .cardTrending__container{
-  width: 280px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+
 }
 
 .container__zoom{
   overflow: hidden;
-  height: 400px;
-  width: 280px;
+  height: 380px;
+  width: 240px;
   border-radius: 12px;
   cursor: pointer;
+
 }
 
 .container__zoom img{
@@ -243,6 +277,7 @@
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+
 }
 
 .container__zoom img:hover{
@@ -294,10 +329,11 @@
 .dividerSeparator{
   width: 100%;
   background-color: var(--backgroundBox);
-  padding: 0 4em;
+  padding: 0 8em;
   display: flex;
   position: relative;
   height: 200px;
+  margin: 4em 0;
 }
 
 .dividerSeparator__pj{
@@ -305,7 +341,7 @@
   bottom: 0;
   right: 0;
   height: 260px;
-  padding-right: 4em;
+  padding-right: 8em;
 }
 
 .dividerSeparator__container{
@@ -349,4 +385,51 @@
 
 .containerBox__text h4{
   color: var(--textSecondary);
+}
+
+/* reservas */
+
+#inComing{
+  padding: 0 8em 2em 8em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.dividerSeparator__pjLeft{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 260px;
+  padding-left: 8em;
+}
+.dividerSeparator__containerPj{
+  width: 400px;
+}
+
+.dividerSeparator__container2{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  gap: 2em;
+  /* background-color: #4786E8; */
+  text-align: center;
+  padding: 2em;
+}
+
+.dividerSeparator__container2 p:nth-child(1){
+  font-size: 2em;
+}
+
+.dividerSeparator__container2 p:nth-child(1) span{
+  background: linear-gradient(180deg, var(--textDegradatePrimary), var(--textDegradateSecundary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dividerSeparator__container2 p:nth-child(2){
+  max-width: 80%;
 }
