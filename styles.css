@@ -114,8 +114,7 @@
 }
 
 .login__divider{
-  border-bottom: 1px solid var(--textSecondary);
-  opacity: .4;
+  border-bottom: 1px solid var(--backgroundActive);
 }
 
 .login__btn{
@@ -201,20 +200,17 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
-  
 }
 
 .trendingGames__header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .trendingGames__header__btn{
   display: flex;
   gap: 1em;
-  
 }
 
 .trendingGames__header__btn i{
@@ -251,8 +247,27 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   /* border: 1px solid red; */
+  overflow-x: auto;
+  gap: 1em;
+  padding-bottom: 8px;
+}
+
+.cardTrending::-webkit-scrollbar {
+  /* -webkit-appearance: none; */
+  height: 12px;
+}
+
+.cardTrending::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+  background-color: var(--backgroundBox);
+}
+
+.cardTrending::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 2em;
 }
 
 .cardTrending__container{
@@ -432,4 +447,103 @@
 
 .dividerSeparator__container2 p:nth-child(2){
   max-width: 80%;
+}
+
+/* popularCategories */
+
+#popularCategories{
+  padding: 2em 8em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.trendingGames__header button{
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: var(--textSecondary);
+  border: none;
+  outline: inherit;
+  font-family: 'Khand', sans-serif;
+  font-size: 1em;
+}
+
+.trendingGames__header button:hover{
+  background-color: rgba(130, 146, 165, 0.3);
+}
+
+.popularCategories__card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px 0;
+  /* border: 1px solid red; */
+  margin-top: 2em;
+}
+
+.popularCategories__card__container{
+  width: 380px;
+  height: 240px;
+  display: flex;
+  border-radius: 12px;
+  align-items: center;
+  background-image: url("./assets/categories/adventurebackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  justify-content: flex-start;
+  padding-left: 2em;
+}
+
+.popularCategories__card__container img{
+  position: absolute;
+  height: 260px;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s;
+  border-radius: 0 0 12px 0;
+  transform-origin: right bottom;
+}
+
+.popularCategories__card__container img:hover{
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+
+}
+
+.popularCategories__card__container:nth-child(2){
+  background-image: url("./assets/categories/survivalbackground.png");
+}
+
+.popularCategories__card__container:nth-child(3){
+  background-image: url("./assets/categories/backgroundFight.png");
+}
+
+.popularCategories__card__container:nth-child(4){
+  background-image: url("./assets/categories/horrorbackground.png");
+}
+
+.popularCategories__card__container:nth-child(5){
+  background-image: url("./assets/categories/soulsbackground.png");
+}
+
+.popularCategories__card__container:nth-child(6){
+  background-image: url("./assets/categories/mobabackground.png");
+}
+
+.popularCategories__card__container:nth-child(7){
+  background-image: url("./assets/categories/cyberbackground.png");
+}
+
+.popularCategories__card__container:nth-child(8){
+  background-image: url("./assets/categories/fpdbackground.png");
+}
+
+.popularCategories__card__container h4{
+  font-size: 24px;
+  letter-spacing: 4px;
 }
