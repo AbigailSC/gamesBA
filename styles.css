@@ -5,11 +5,10 @@
   --backgroundBoxGradient: #1b283e;
   --textPrimary: #ffffff;
   --textDegradatePrimary: #6F3DCC;
+  --textDegradatePrimeryHover:#854eeb;
   --textDegradateSecundary: #4786E8;
   --textSecondary: #8292a6;
-  --size: 50px;   /* size of the cut */
-  --gap: 10px;    /* the gap */
-  --angle: 90deg; /* angle of the arrow */
+  --box: #334155;
   background-color: var(--background);
   color: var(--textPrimary);
   font-family: 'Khand', sans-serif;
@@ -547,6 +546,115 @@
   letter-spacing: 4px;
 }
 
+/*divider 3*/
+
+.dividerSeparator__container--pay{
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 320px);
+  align-items: center;
+  gap: 2em;
+}
+
+.dividerSeparator__container--pay h3{
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+.dividerSeparator__container--pay p{
+  color: var(--textSecondary);
+}
+
+/*Divider comments*/
+
+.dividerComments{
+  width: 100%;
+  background-color: var(--backgroundBox);
+  background-image: url("./assets/comments/opcion4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 8em;
+  display: flex;
+  position: relative;
+  height: 400px;
+  margin-top: 4em;
+}
+
+.dividerComments__pjLeft{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 380px;
+  padding-left: 8em;
+}
+
+.dividerComments__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+  gap: 2em;
+}
+
+.dividerComments__box{
+  font-size: 24px;
+  width: 80%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dividerComments__box h3{
+  font-weight: 400;
+}
+
+.dividerComments__box button{
+  width: 70%;
+  background-color: var(--textDegradatePrimary);
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  outline: inherit;
+  font-family: 'Khand', sans-serif;
+  font-size: 1em;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.dividerComments__box button:hover{
+  background-color: var(--textDegradatePrimeryHover);
+}
+
+.commentsRating{
+  display: flex;
+  gap: 8px;
+}
+
+/* comments boxes */
+
+.comments__container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 4em;
+}
+
+.comments__box{
+  background-color: var(--box);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.comments__header img{
+  width: 80px;
+  border-radius: 12px;
+}
+
 /* footer */
 
 .footer{
@@ -643,4 +751,22 @@
   border-radius: 100%;
   width: 100%;
   opacity: 0.3;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 2em;
+  background-color: rgba(130, 146, 166, 40%);
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--backgroundBox);
 }
