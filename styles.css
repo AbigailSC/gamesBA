@@ -187,9 +187,17 @@
   border: 2px solid var(--textDegradatePrimary);
 }
 
-.containerBtn__btn:hover{
-  -webkit-transform: scale(1.1);
-	transform: scale(1.1);
+.containerBtn__btn:nth-child(1):hover{
+  background-color: var(--textDegradatePrimeryHover);
+}
+
+.containerBtn__btn:nth-child(2):hover{
+  border: 2px solid var(--textDegradatePrimeryHover);
+  color: var(--textSecondary);
+}
+
+.containerBtn__btn:active {
+  transform: scale(0.96);
 }
 
 /* trendingGames */
@@ -338,6 +346,10 @@
   color: var(--textDegradatePrimary);
 }
 
+.container__icon:active{
+  transform: scale(0.9);
+}
+
 /* divider */
 
 .dividerSeparator{
@@ -473,6 +485,10 @@
   background-color: rgba(130, 146, 165, 0.3);
 }
 
+.trendingGames__header button:active{
+  transform: scale(0.96);
+}
+
 .popularCategories__card{
   display: flex;
   flex-wrap: wrap;
@@ -565,6 +581,88 @@
   color: var(--textSecondary);
 }
 
+/*newsletter*/
+
+#lastestNews{
+  padding: 0em 8em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.lastestNews__container{
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.lastestNews__box{
+  /* border: 1px solid red; */
+  width: 580px;
+  min-width: 500px;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3em;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.lastestNews__box:nth-child(1){
+  background-image: url("./assets/news1.png");
+}
+
+.lastestNews__box:nth-child(2){
+  background-image: url("./assets/news2.png");
+}
+
+.lastestNews__box:nth-child(3){
+  background-image: url("./assets/news3.png");
+}
+
+.lastestNews__box h3{
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lastestNews__box h3:hover{
+  color: var(--textSecondary);
+}
+
+.lastestNews__box p{
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 120px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.lastestNews__box__footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.lastestNews__divider{
+  border-bottom: 1px solid var(--textSecondary);
+  width: 100px;
+  opacity: .4;
+}
+
 /*Divider comments*/
 
 .dividerComments{
@@ -628,6 +726,10 @@
 
 .dividerComments__box button:hover{
   background-color: var(--textDegradatePrimeryHover);
+}
+
+.dividerComments__box button:active{
+  transform: scale(0.98);
 }
 
 .commentsRating{
@@ -705,6 +807,69 @@
 
 .comments__body p{
   color: var(--textSecondary);
+}
+
+/*Newsletter*/
+
+.newsletterBackgroundImg{
+  background-image: url("./assets/map.jpg");
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.newsletter__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - 320px);
+  align-items: center;
+  gap: 1em;
+}
+
+.newsletter__container h3:nth-child(1){
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.newsletter__container h3:nth-child(2){
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.newsletter__input{
+  display: flex;
+  height: 2em;
+}
+
+.newsletter__input input{
+  padding: 4px 12px;
+  width: 300px;
+  background-color: var(--textPrimary);
+  outline: unset;
+  border: unset;
+  color: var(--textSecondary);
+  clip-path: polygon(10px 0%, 100% 0, 100% 100%, 0 100%, 0 10px);
+}
+
+.newsletter__input button{
+  color: var(--textPrimary);
+  background-color: var(--textDegradatePrimary);
+  outline: unset;
+  border: unset;
+  padding: 4px 12px;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.newsletter__input button:hover{
+  background-color: var(--textDegradatePrimeryHover);
+}
+
+.newsletter__input button:active{
+  transform: scale(0.98);
 }
 
 /* footer */
@@ -802,7 +967,7 @@
   border-bottom: 1px solid var(--textSecondary);
   border-radius: 100%;
   width: 100%;
-  opacity: 0.3;
+  opacity: .3;
 }
 
 /* scrollbar */
