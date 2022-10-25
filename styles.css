@@ -24,6 +24,10 @@
   /* border:1px solid red; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header{
   width: 100%;
   display: flex;
@@ -32,7 +36,7 @@
   padding: 2em 8em;
   position: fixed;
   height: 90px;
-  z-index: 10;
+  z-index: 40;
   
 }
 
@@ -130,6 +134,17 @@
   background-color: var(--backgroundActive);
 }
 
+.backgroundHeaderSticky{
+  width: 100%;
+  height: 90px;
+  position: sticky;
+  top: 0px;
+  background-color: var(--backgroundBox);
+  z-index: 30;
+} 
+
+/*Landing*/
+
 #landing {
   width: 100%;
   height: 80vh;
@@ -139,6 +154,7 @@
   background-attachment: fixed;
   box-shadow: inset 0 520px 80px -460px rgb(16 16 16/50%);
   clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 60px));
+  z-index: 30;
 }
 
 .hero {
@@ -203,7 +219,7 @@
 /* trendingGames */
 
 #trendingGames{
-  padding: 2em 8em;
+  padding: 6em 8em 0 8em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -359,7 +375,7 @@
   display: flex;
   position: relative;
   height: 200px;
-  margin: 4em 0;
+  margin-top: 6em;
 }
 
 .dividerSeparator__pj{
@@ -416,7 +432,7 @@
 /* reservas */
 
 #inComing{
-  padding: 0 8em 2em 8em;
+  padding: 6em 8em 2em 8em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -463,7 +479,7 @@
 /* popularCategories */
 
 #popularCategories{
-  padding: 2em 8em;
+  padding: 6em 8em 0 8em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -584,7 +600,7 @@
 /*newsletter*/
 
 #lastestNews{
-  padding: 0em 8em;
+  padding: 6em 8em 2em 8em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -621,11 +637,11 @@
 }
 
 .lastestNews__box:nth-child(2){
-  background-image: url("./assets/news2.png");
+  background-image: url("./assets/news3.png");
 }
 
 .lastestNews__box:nth-child(3){
-  background-image: url("./assets/news3.png");
+  background-image: url("./assets/news2.png");
 }
 
 .lastestNews__box h3{
@@ -875,6 +891,7 @@
 /* footer */
 
 .footer{
+  margin-top: 4em;
   padding: 2em 8em;
   background-color: var(--backgroundBox);
   text-align: center;
