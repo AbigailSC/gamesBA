@@ -1017,6 +1017,10 @@ html {
   display: flex;
 }
 
+#registerContainer:nth-child(2){
+  background-image: url("./assets/landingLol.png");
+}
+
 .registerContainer__logo{
   display: flex;
   text-align: center;

@@ -4,9 +4,97 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mediaquerys.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.ico" />
     <title>Inicia sesión | GamesBA</title>
   </head>
   <body>
-    login
+    <header class="header">
+      <a href="./index.html"
+        ><h1 class="header__title">Games<span class="header__title--span">BA</span></h1></a
+      >
+      <nav>
+        <ul class="navList">
+          <li class="navList_item"><a href="./index.html">Inicio</a></li>
+          <span class="navList__divider"></span>
+          <li class="navList_item"><a href="#popularCategories">Categorias</a></li>
+          <span class="navList__divider"></span>
+          <li class="navList_item"><a href="#trendingGames">Tendencias</a></li>
+          <span class="navList__divider"></span>
+          <li class="navList_item"><a href="#inComing">Pre-orden</a></li>
+          <span class="navList__divider"></span>
+          <li class="navList_item"><a href="#lastestNews">Blog</a></li>
+        </ul>
+      </nav>
+      <!-- <div>
+        <input type="text" placeholder="Buscar un videojuego..." />
+      </div> -->
+      <div class="login">
+        <label for="login__toggle" class="login__label">
+          <img src="./assets/icons/user.svg" class="login--btn" />
+          <img src="./assets/icons/downArrow.svg" />
+        </label>
+        <input type="checkbox" id="login__toggle" />
+        <div class="login__containerBtn">
+          <p class="login__btn"><a href="./register.html">Registrarse</a></p>
+          <span class="login__divider"></span>
+          <p class="login__btn"><a href="./login.html">Iniciar sesión</a></p>
+        </div>
+      </div>
+    </header>
+    <section id="registerContainer">
+      <div class="registerContainer__logo">
+        <h3 class="header__title">Games<span class="header__title--span">BA</span></h3>
+      </div>
+      <div class="registerContainer">
+        <div class="registerContainer__box">
+          <h3>Bienvenido de nuevo!</h3>
+          <input type="text" placeholder="E-mail" class="box__input" />
+          <div class="input__password">
+            <input type="text" placeholder="Contraseña" class="box__input" />
+            <i class="fa-regular fa-eye"></i>
+          </div>
+          <label class="registerContainer__box__terms" for="terms">
+            <input type="checkbox" id="terms" />
+            <p>Recuerdame</span></p>
+          </label>
+          <button>Iniciar sesión</button>
+        </div>
+        <div class="registerContainer__others">
+          <span class="others__divider"></span>
+          <p>Entrar con</p>
+          <span class="others__divider"></span>
+        </div>
+        <div class="registerContainer__footer">
+          <div class="registerContainer__footer__boxMedia">
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <div class="registerContainer__footer__boxMedia">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="registerContainer__footer__boxMedia">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="registerContainer__footer__boxMedia">
+            <i class="fa-brands fa-apple"></i>
+          </div>
+        </div>
+        <p>Aún no tienes una cuenta? <span>Crea tu cuenta</span></p>
+      </div>
+    </section>
   </body>
 </html>
