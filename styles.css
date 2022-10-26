@@ -32,12 +32,12 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* background-color: var(--backgroundBox); */
+  background-color: var(--backgroundBox);
   padding: 2em 8em;
   position: fixed;
   height: 90px;
   z-index: 40;
-  
+  /* border: 1px solid red; */
 }
 
 .header__title{
@@ -759,7 +759,7 @@ html {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 2em 4em;
+  padding: 2em 4em 0 4em;
   align-items: center;
 }
 
@@ -1003,4 +1003,181 @@ html {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: var(--backgroundBox);
+}
+
+/*---------------------------------------------REGISTER-------------------------------------------------*/
+
+#registerContainer{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-image: url("./assets/landingValorant2.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.registerContainer__logo{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  font-size: 3em;
+}
+
+.registerContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color: var(--background);
+  gap: 2em;
+}
+
+.registerContainer span{
+  color: var(--textDegradatePrimary);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.registerContainer span:hover{
+  color: var(--textDegradatePrimeryHover);
+}
+
+.registerContainer__box{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 2em;
+}
+
+.registerContainer__box__header{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.registerContainer__box h3{
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+
+.box__input{
+  width: 100%;
+  color: var(--textSecondary);
+  background-color: var(--textPrimary);
+  padding: 8px 12px;
+  border: unset;
+  outline: unset;
+  border-radius: 6px;
+}
+
+.registerContainer__box__terms{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.registerContainer__box__terms input{
+  cursor: pointer;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.registerContainer__box__terms p{
+  cursor: pointer;
+  color: var(--textSecondary);
+}
+
+.registerContainer__box__terms span{
+  color: var(--textDegradatePrimary);
+}
+
+.input__password{
+  width: 100%;
+  position: relative;
+}
+
+.input__password i{
+  position: absolute;
+  color: #121926;
+  left: 95%;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.input__password i:hover{
+  color: var(--textDegradatePrimary);
+}
+
+.registerContainer__box button{
+  color: var(--textPrimary);
+  background-color: var(--textDegradatePrimary);
+  padding: 12px;
+  border: unset;
+  outline: unset;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.registerContainer__box button:hover{
+  background-color: var(--textDegradatePrimeryHover);
+}
+
+.registerContainer__box button:active{
+  transform: scale(0.98);
+}
+
+.registerContainer__others{
+  display: flex;
+  width: 60%;
+  gap: 1em;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.others__divider{
+  border-bottom: 1px solid var(--textSecondary);
+  opacity: 0.4;
+  height: 16px;
+  width: 35%;
+}
+
+.registerContainer__footer{
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.registerContainer__footer__boxMedia{
+  background-color: var(--backgroundActive);
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.registerContainer__footer__boxMedia:hover{
+  color: var(--textSecondary);
+}
+
+.registerContainer__footer__boxMedia i{
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerContainer p{
+  text-align: center;
 }
