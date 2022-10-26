@@ -423,6 +423,13 @@ html {
   border-radius: 12;
 }
 
+.dividerSeparator__dividerLine__second{
+  border-right: 2px solid var(--textSecondary);
+  height: 100px;
+  opacity: .4;
+  border-radius: 12;
+}
+
 .containerBox{
   display: flex;
   align-items: center;
@@ -529,7 +536,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 60px 0;
+  gap: 60px 12px;
   /* border: 1px solid red; */
   margin-top: 2em;
 }
