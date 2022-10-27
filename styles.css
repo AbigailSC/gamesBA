@@ -39,6 +39,9 @@ html {
   z-index: 40;
   /* border: 1px solid red; */
 }
+#menuToggle, .menuLabel{
+  display: none;
+}
 
 .header__title{
   font-size: 1em;
