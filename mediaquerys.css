@@ -63,6 +63,9 @@
   .popularCategories__card__container:nth-child(8){
     display: flex;
   }
+  .input__password i{
+    left: 93%;
+  }
 }
 
 @media (max-width:1380px){
@@ -203,6 +206,9 @@
   .footer__title{
     display: none;
   }
+  .input__password i{
+    left: 91%;
+  }
 }
 
 @media (max-width:998px){
@@ -289,6 +295,13 @@
   }
   #landing{
     height: 60vh;
+  }
+  /*REGISTER*/
+  .registerContainer__logo{
+    display: none;
+  }
+  .registerContainer{
+    width: 100%;
   }
 }
 
@@ -554,6 +567,15 @@
   .dividerSeparator__boxContainer p{
     width: 300px;
   }
+  /*REGISTER*/
+  .registerContainer__box{
+    width: 100%;
+    padding: 0 2em;
+  }
+  .registerContainer__others{
+    width: 100%;
+    padding: 0 2em;
+  }
 }
 
 @media (max-width:400px){
@@ -574,5 +596,12 @@
   }
   .dividerSeparator__boxContainer p{
     width: 200px;
+  }
+  /*REGISTER*/
+  .registerContainer__footer__boxMedia{
+    padding: 8px;
+  }
+  .registerContainer__box{
+    margin-top: 90px;
   }
 }
