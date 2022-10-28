@@ -287,6 +287,9 @@
   .dividerComments{
     padding: 0 4em;
   }
+  #landing{
+    height: 60vh;
+  }
 }
 
 @media (max-width:724px){
@@ -560,10 +563,16 @@
   .newsletter__input input{
     width: 60%;
   }
-  main{
+  /* * {
+    border: 1px solid red;
+  } */
+  .header{
+    width: 100vw;
+  }
+  .dividerSeparator__boxContainer h3{
     width: 100%;
   }
-  #landing{
-    width: 100%;
+  .dividerSeparator__boxContainer p{
+    width: 200px;
   }
 }
