@@ -87,6 +87,10 @@ html {
   color: var(--textSecondary);
 }
 
+.navList_item:active{
+  transform: scale(0.9);
+}
+
 .login {
   display: flex;
   align-items: center;

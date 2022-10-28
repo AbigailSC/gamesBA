@@ -294,7 +294,7 @@
     padding: 0 4em;
   }
   #landing{
-    height: 60vh;
+    height: 70vh;
   }
   /*REGISTER*/
   .registerContainer__logo{
@@ -603,5 +603,8 @@
   }
   .registerContainer__box{
     margin-top: 90px;
+  }
+  #landing{
+    height: 90vh;
   }
 }
