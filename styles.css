@@ -115,7 +115,7 @@ html {
 
 .login__containerBtn{
   position: absolute;
-  top: 70px;
+  top: 36px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -238,7 +238,6 @@ html {
   flex-direction: column;
   justify-content: center;
   width: 50%;
-
   gap: 1em;
 }
 

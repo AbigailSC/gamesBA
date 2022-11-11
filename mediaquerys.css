@@ -240,7 +240,7 @@
     padding: 2em 4em;
     /* border: 1px solid red; */
   }
-  .hero {
+  #landing{
     padding: 0 4em;
   }
   #trendingGames{
@@ -307,7 +307,7 @@
     padding: 2em;
     /* border: 1px solid red; */
   }
-  .hero {
+  #landing{
     padding: 0 2em;
   }
   #trendingGames{
@@ -408,6 +408,14 @@
   }
   .header{
     background-color: var(--backgroundBox);
+    position: relative;
+    width: 100%;
+  }
+  .header__container{
+    position: static;
+  }
+  .login{
+    position: relative;
   }
   .menuLabel {
     display: flex;
@@ -433,7 +441,7 @@
     border-top: 1px solid var(--box);
     padding: 20px 0;
     gap: 20px;
-    
+    width: 100vw;
   }
   .navList a {
     font-size: 24px;
@@ -541,7 +549,7 @@
 
 @media (max-width:568px){
   .hero{
-    padding: 2em;
+    padding: 2em 0;
     width: 100%;
     justify-content: center;
     text-align: center;
