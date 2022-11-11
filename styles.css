@@ -971,7 +971,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: calc(100% - 320px);
+  width: 100%;
   align-items: center;
   gap: 1em;
 }
