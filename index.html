@@ -24,39 +24,41 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__title">
-        <a href="./index.html">Games<span class="header__title--span">BA</span></a>
-      </h1>
-      <nav>
-        <label for="menuToggle" class="menuLabel">
-          <img src="./assets/icons/menu.svg" class="menuIcon" />
-        </label>
-        <input type="checkbox" id="menuToggle" />
-        <ul class="navList">
-          <li class="navList_item"><a href="#">Inicio</a></li>
-          <span class="navList__divider"></span>
-          <li class="navList_item"><a href="#popularCategories">Categorias</a></li>
-          <span class="navList__divider"></span>
-          <li class="navList_item"><a href="#trendingGames">Tendencias</a></li>
-          <span class="navList__divider"></span>
-          <li class="navList_item"><a href="#inComing">Pre-orden</a></li>
-          <span class="navList__divider"></span>
-          <li class="navList_item"><a href="#lastestNews">Blog</a></li>
-        </ul>
-      </nav>
-      <!-- <div>
-        <input type="text" placeholder="Buscar un videojuego..." />
-      </div> -->
-      <div class="login">
-        <label for="login__toggle" class="login__label">
-          <img src="./assets/icons/user.svg" class="login--btn" />
-          <img src="./assets/icons/downArrow.svg" />
-        </label>
-        <input type="checkbox" id="login__toggle" />
-        <div class="login__containerBtn">
-          <a href="./register.html"><p class="login__btn">Registrarse</p></a>
-          <span class="login__divider"></span>
-          <a href="./login.html"><p class="login__btn">Iniciar sesión</p></a>
+      <div class="header__container">
+        <h1 class="header__title">
+          <a href="./index.html">Games<span class="header__title--span">BA</span></a>
+        </h1>
+        <nav>
+          <label for="menuToggle" class="menuLabel">
+            <img src="./assets/icons/menu.svg" class="menuIcon" />
+          </label>
+          <input type="checkbox" id="menuToggle" />
+          <ul class="navList">
+            <li class="navList_item"><a href="#">Inicio</a></li>
+            <span class="navList__divider"></span>
+            <li class="navList_item"><a href="#popularCategories">Categorias</a></li>
+            <span class="navList__divider"></span>
+            <li class="navList_item"><a href="#trendingGames">Tendencias</a></li>
+            <span class="navList__divider"></span>
+            <li class="navList_item"><a href="#inComing">Pre-orden</a></li>
+            <span class="navList__divider"></span>
+            <li class="navList_item"><a href="#lastestNews">Blog</a></li>
+          </ul>
+        </nav>
+        <!-- <div>
+          <input type="text" placeholder="Buscar un videojuego..." />
+        </div> -->
+        <div class="login">
+          <label for="login__toggle" class="login__label">
+            <img src="./assets/icons/user.svg" class="login--btn" />
+            <img src="./assets/icons/downArrow.svg" />
+          </label>
+          <input type="checkbox" id="login__toggle" />
+          <div class="login__containerBtn">
+            <a href="./register.html"><p class="login__btn">Registrarse</p></a>
+            <span class="login__divider"></span>
+            <a href="./login.html"><p class="login__btn">Iniciar sesión</p></a>
+          </div>
         </div>
       </div>
     </header>
@@ -64,600 +66,624 @@
     <main>
 
       <section id="landing">
-        <div class="hero">
-          <h3 class="hero__title">Silent hill 2 <span>Remake</span></h3>
-          <p class="hero__overview">
-            “En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
-            allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
-            especial" esperándote...”.
-          </p>
-          <div class="containerBtn">
-            <button class="containerBtn__btn">Reservar</button>
-            <button class="containerBtn__btn">Añadir a deseados</button>
+        <div class="landing__container">
+          <div class="hero">
+            <h3 class="hero__title">Silent hill 2 <span>Remake</span></h3>
+            <p class="hero__overview">
+              “En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
+              allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
+              especial" esperándote...”.
+            </p>
+            <div class="containerBtn">
+              <button class="containerBtn__btn">Reservar</button>
+              <button class="containerBtn__btn">Añadir a deseados</button>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="trendingGames">
-        <div class="trendingGames__header">
-          <div class="title">
-            <span class="title__divider"></span>
-            <h3>Tendencias</h3>
-          </div>
-          <div class="trendingGames__header__btn">
-            <i class="fa-solid fa-chevron-left"></i>
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-        </div>
-        <div class="cardTrending">
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/trending/aplagetale.png" alt="A plague tale Requiem" />
+        <div class="trandingGames__container">
+          <div class="trendingGames__header">
+            <div class="title">
+              <span class="title__divider"></span>
+              <h3>Tendencias</h3>
             </div>
-            <div class="container__header">
-              <h3>A plague tale: Requiem</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$6.000</h3>
-              <h3>$7.200</h3>
+            <div class="trendingGames__header__btn">
+              <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-chevron-right"></i>
             </div>
           </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/trending/bayonetta3.png" alt="A plague tale Requiem" />
+          <div class="cardTrending">
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/trending/aplagetale.png" alt="A plague tale Requiem" />
+              </div>
+              <div class="container__header">
+                <h3>A plague tale: Requiem</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$6.000</h3>
+                <h3>$7.200</h3>
+              </div>
             </div>
-            <div class="container__header">
-              <h3>Bayonetta 3</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/trending/bayonetta3.png" alt="A plague tale Requiem" />
+              </div>
+              <div class="container__header">
+                <h3>Bayonetta 3</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$8.600</h3>
+              </div>
             </div>
-            <div class="container__footer">
-              <h3>$8.600</h3>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/trending/cod2.png" alt="Call of Duty Modern Warfare 2" />
+              </div>
+              <div class="container__header">
+                <h3>Call of Duty Modern Warfare 2</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$9.400</h3>
+              </div>
             </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/trending/cod2.png" alt="Call of Duty Modern Warfare 2" />
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/trending/dragonball.png" alt="Dragon Ball: The Breakers" />
+              </div>
+              <div class="container__header">
+                <h3>Dragon Ball: The Breakers</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$3.200</h3>
+                <h3>$3.700</h3>
+              </div>
             </div>
-            <div class="container__header">
-              <h3>Call of Duty Modern Warfare 2</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img
+                  src="./assets/trending/uncharted.png"
+                  alt="Uncharted Legacy of Thieves Collection"
+                />
+              </div>
+              <div class="container__header">
+                <h3>Uncharted Legacy of Thieves Collection</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$7.200</h3>
+                <h3>$7.900</h3>
+              </div>
             </div>
-            <div class="container__footer">
-              <h3>$9.400</h3>
-            </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/trending/dragonball.png" alt="Dragon Ball: The Breakers" />
-            </div>
-            <div class="container__header">
-              <h3>Dragon Ball: The Breakers</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$3.200</h3>
-              <h3>$3.700</h3>
-            </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img
-                src="./assets/trending/uncharted.png"
-                alt="Uncharted Legacy of Thieves Collection"
-              />
-            </div>
-            <div class="container__header">
-              <h3>Uncharted Legacy of Thieves Collection</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$7.200</h3>
-              <h3>$7.900</h3>
-            </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img
-                src="./assets/trending/fifa23.png"
-                alt="Uncharted Legacy of Thieves Collection"
-              />
-            </div>
-            <div class="container__header">
-              <h3>Fifa 23</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$8.300</h3>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img
+                  src="./assets/trending/fifa23.png"
+                  alt="Uncharted Legacy of Thieves Collection"
+                />
+              </div>
+              <div class="container__header">
+                <h3>Fifa 23</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$8.300</h3>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <div class="dividerSeparator">
-        <div class="dividerSeparator__container">
-          <div class="containerBox">
-            <img src="./assets/icons/download.svg" />
-            <div class="containerBox__text">
-              <h3>Súper rápido</h3>
-              <h4>Descarga digital instantánea</h4>
+        <div class="dividerSeparator__container__main">
+          <div class="dividerSeparator__container">
+            <div class="containerBox">
+              <img src="./assets/icons/download.svg" />
+              <div class="containerBox__text">
+                <h3>Súper rápido</h3>
+                <h4>Descarga digital instantánea</h4>
+              </div>
+            </div>
+            <div class="dividerSeparator__dividerLine"></div>
+            <div class="containerBox">
+              <img src="./assets/icons/shield.svg" />
+              <div class="containerBox__text">
+                <h3>Fiable y seguro</h3>
+                <h4>Más de 10.000 juegos</h4>
+              </div>
+            </div>
+            <div class="dividerSeparator__dividerLine"></div>
+            <div class="containerBox">
+              <img src="./assets/icons/chat.svg" />
+              <div class="containerBox__text">
+                <h3>Atención al cliente</h3>
+                <h4>Agente disponible 24/7</h4>
+              </div>
             </div>
           </div>
-          <div class="dividerSeparator__dividerLine"></div>
-          <div class="containerBox">
-            <img src="./assets/icons/shield.svg" />
-            <div class="containerBox__text">
-              <h3>Fiable y seguro</h3>
-              <h4>Más de 10.000 juegos</h4>
-            </div>
-          </div>
-          <div class="dividerSeparator__dividerLine"></div>
-          <div class="containerBox">
-            <img src="./assets/icons/chat.svg" />
-            <div class="containerBox__text">
-              <h3>Atención al cliente</h3>
-              <h4>Agente disponible 24/7</h4>
-            </div>
-          </div>
+          <img src="./assets/ReynaMod.png" class="dividerSeparator__pj" />
         </div>
-        <img src="./assets/ReynaMod.png" class="dividerSeparator__pj" />
       </div>
 
       <section id="inComing">
-        <div class="trendingGames__header">
-          <div class="title">
-            <span class="title__divider"></span>
-            <h3>Reservas</h3>
-          </div>
-          <div class="trendingGames__header__btn">
-            <i class="fa-solid fa-chevron-left"></i>
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-        </div>
-        <div class="cardTrending">
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/news/spiderman.png" alt="Marvel's Spider-Man: Miles Morales" />
+        <div class="inComing__container">
+          <div class="trendingGames__header">
+            <div class="title">
+              <span class="title__divider"></span>
+              <h3>Reservas</h3>
             </div>
-            <div class="container__header">
-              <h3>Marvel's Spider-Man: Miles Morales</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$6.600</h3>
+            <div class="trendingGames__header__btn">
+              <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-chevron-right"></i>
             </div>
           </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/news/silenhill2.png" alt="Silent hill 2 remake" />
+          <div class="cardTrending">
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/news/spiderman.png" alt="Marvel's Spider-Man: Miles Morales" />
+              </div>
+              <div class="container__header">
+                <h3>Marvel's Spider-Man: Miles Morales</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$6.600</h3>
+              </div>
             </div>
-            <div class="container__header">
-              <h3>Silent hill 2 remake</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/news/silenhill2.png" alt="Silent hill 2 remake" />
+              </div>
+              <div class="container__header">
+                <h3>Silent hill 2 remake</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$7.600</h3>
+                <h3>$7.900</h3>
+              </div>
             </div>
-            <div class="container__footer">
-              <h3>$7.600</h3>
-              <h3>$7.900</h3>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/news/gothanknights.png" alt="Gotham Knights" />
+              </div>
+              <div class="container__header">
+                <h3>Gotham Knights Deluxe Edition</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$5.400</h3>
+                <h3>$5.900</h3>
+              </div>
             </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/news/gothanknights.png" alt="Gotham Knights" />
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/news/farmingsimulator.png" alt="Farming Simulator 2022" />
+              </div>
+              <div class="container__header">
+                <h3>Farming Simulator 2022</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$4.400</h3>
+                <h3>$4.700</h3>
+              </div>
             </div>
-            <div class="container__header">
-              <h3>Gotham Knights Deluxe Edition</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/news/deadSpace.png" alt="Dead Space Remake" />
+              </div>
+              <div class="container__header">
+                <h3>Dead Space Remake</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$5.200</h3>
+                <h3>$5.800</h3>
+              </div>
             </div>
-            <div class="container__footer">
-              <h3>$5.400</h3>
-              <h3>$5.900</h3>
-            </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/news/farmingsimulator.png" alt="Farming Simulator 2022" />
-            </div>
-            <div class="container__header">
-              <h3>Farming Simulator 2022</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$4.400</h3>
-              <h3>$4.700</h3>
-            </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/news/deadSpace.png" alt="Dead Space Remake" />
-            </div>
-            <div class="container__header">
-              <h3>Dead Space Remake</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$5.200</h3>
-              <h3>$5.800</h3>
-            </div>
-          </div>
-          <div class="cardTrending__container">
-            <div class="container__zoom">
-              <img src="./assets/news/ocean.png" alt="Star Ocean: The Divine Force" />
-            </div>
-            <div class="container__header">
-              <h3>Star Ocean: The Divine Force</h3>
-              <i class="fa-solid fa-heart container__icon"></i>
-            </div>
-            <div class="container__footer">
-              <h3>$6.800</h3>
+            <div class="cardTrending__container">
+              <div class="container__zoom">
+                <img src="./assets/news/ocean.png" alt="Star Ocean: The Divine Force" />
+              </div>
+              <div class="container__header">
+                <h3>Star Ocean: The Divine Force</h3>
+                <i class="fa-solid fa-heart container__icon"></i>
+              </div>
+              <div class="container__footer">
+                <h3>$6.800</h3>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <div class="dividerSeparator">
-        <div class="dividerSeparator__containerPj">
-          <img src="./assets/yorumod.png" class="dividerSeparator__pjLeft" />
-        </div>
-        <div class="dividerSeparator__container2">
-          <p>
-            Estamos en la misión de ayudar a todos en descubrir la <span>alegría</span> de los
-            videojuegos
-          </p>
-          <p>
-            GamesBA ha sido creado para ofrecerte todos los juegos que siempre has deseado, en tu
-            moneda local. El futuro de los videojuegos va más allá del entretenimiento, ¡y es un
-            privilegio ayudar a darle forma! Estamos construyendo un marketplace seguro, asequible y
-            sostenible para todos los jugadores de hoy y mañana.
-          </p>
+        <div class="dividerSeparator__container__main">
+          <div class="dividerSeparator__containerPj">
+            <img src="./assets/yorumod.png" class="dividerSeparator__pjLeft" />
+          </div>
+          <div class="dividerSeparator__container2">
+            <p>
+              Estamos en la misión de ayudar a todos en descubrir la <span>alegría</span> de los
+              videojuegos
+            </p>
+            <p>
+              GamesBA ha sido creado para ofrecerte todos los juegos que siempre has deseado, en tu
+              moneda local. El futuro de los videojuegos va más allá del entretenimiento, ¡y es un
+              privilegio ayudar a darle forma! Estamos construyendo un marketplace seguro, asequible y
+              sostenible para todos los jugadores de hoy y mañana.
+            </p>
+          </div>
         </div>
       </div>
 
       <section id="popularCategories">
-        <div class="trendingGames__header">
-          <div class="title">
-            <span class="title__divider"></span>
-            <h3>Categorías</h3>
+        <div class="popularCategories__container">
+          <div class="trendingGames__header">
+            <div class="title">
+              <span class="title__divider"></span>
+              <h3>Categorías</h3>
+            </div>
+            <button>Ver todo</button>
           </div>
-          <button>Ver todo</button>
-        </div>
-        <div class="popularCategories__card">
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/adventurePJ.png" alt="Aventura" />
-            <h4>Aventura</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/survivalPJ.png" alt="Supervivencia" />
-            <h4>Supervivencia</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/fightPJ.png" alt="Lucha" />
-            <h4>Lucha</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/horrorPJ.png" alt="Terror" />
-            <h4>Terror</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/accionPJ.png" alt="Acción" />
-            <h4>Acción</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/mobaPJ.png" alt="Moba" />
-            <h4>Moba</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/cyberPJ.png" alt="Rol" />
-            <h4>Rol</h4>
-          </div>
-          <div class="popularCategories__card__container">
-            <img src="./assets/categories/fpsPJ.png" alt="FPS" />
-            <h4>FPS</h4>
+          <div class="popularCategories__card">
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/adventurePJ.png" alt="Aventura" />
+              <h4>Aventura</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/survivalPJ.png" alt="Supervivencia" />
+              <h4>Supervivencia</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/fightPJ.png" alt="Lucha" />
+              <h4>Lucha</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/horrorPJ.png" alt="Terror" />
+              <h4>Terror</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/accionPJ.png" alt="Acción" />
+              <h4>Acción</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/mobaPJ.png" alt="Moba" />
+              <h4>Moba</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/cyberPJ.png" alt="Rol" />
+              <h4>Rol</h4>
+            </div>
+            <div class="popularCategories__card__container">
+              <img src="./assets/categories/fpsPJ.png" alt="FPS" />
+              <h4>FPS</h4>
+            </div>
           </div>
         </div>
       </section>
 
       <div class="dividerSeparator">
-        <div class="dividerSeparator__container--pay">
-          <div class="dividerSeparator__boxContainer">
-            <h3>Catálogo de Juegos</h3>
-            <p>
-              En nuestra tienda podrás acceder a los juegos más recientes disponibles. Ya no hace
-              falta depender de páginas internacionales para realizar tus compras.
-            </p>
+        <div class="dividerSeparator__container__main">
+          <div class="dividerSeparator__container--pay">
+            <div class="dividerSeparator__boxContainer">
+              <h3>Catálogo de Juegos</h3>
+              <p>
+                En nuestra tienda podrás acceder a los juegos más recientes disponibles. Ya no hace
+                falta depender de páginas internacionales para realizar tus compras.
+              </p>
+            </div>
+            <div class="dividerSeparator__dividerLine__second"></div>
+            <div class="dividerSeparator__boxContainer">
+              <h3>Medios de Pago</h3>
+              <p>
+                Con Mercadopago y PayU podrás pagar de manera fácil, rápida y segura. Solo debes
+                registrarte en nuestro Sitio, elegir el medio de pago, y listo! Además disponemos de
+                Transferencia Bancaria Directa.
+              </p>
+            </div>
+            <div class="dividerSeparator__dividerLine__second"></div>
+            <div class="dividerSeparator__boxContainer">
+              <h3>Novedades</h3>
+              <p>
+                Toda la información sobre los últimos juegos, descuentos, promociones, gameplays y
+                eventos en el mundo de los videojuegos. Puedes comentar sin necesidad de registrarte
+                en nuestro Sitio y sin compromisos!
+              </p>
+            </div>
           </div>
-          <div class="dividerSeparator__dividerLine__second"></div>
-          <div class="dividerSeparator__boxContainer">
-            <h3>Medios de Pago</h3>
-            <p>
-              Con Mercadopago y PayU podrás pagar de manera fácil, rápida y segura. Solo debes
-              registrarte en nuestro Sitio, elegir el medio de pago, y listo! Además disponemos de
-              Transferencia Bancaria Directa.
-            </p>
-          </div>
-          <div class="dividerSeparator__dividerLine__second"></div>
-          <div class="dividerSeparator__boxContainer">
-            <h3>Novedades</h3>
-            <p>
-              Toda la información sobre los últimos juegos, descuentos, promociones, gameplays y
-              eventos en el mundo de los videojuegos. Puedes comentar sin necesidad de registrarte
-              en nuestro Sitio y sin compromisos!
-            </p>
-          </div>
+          <img src="./assets/viperMod.png" class="dividerSeparator__pj" />
         </div>
-        <img src="./assets/viperMod.png" class="dividerSeparator__pj" />
       </div>
 
       <section id="lastestNews">
-        <div class="trendingGames__header">
-          <div class="title">
-            <span class="title__divider"></span>
-            <h3>Noticias</h3>
-          </div>
-          <div class="trendingGames__header__btn">
-            <i class="fa-solid fa-chevron-left"></i>
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-        </div>
-        <div class="lastestNews__container">
-          <div class="lastestNews__box">
-            <h3>
-              Análisis de Overwatch 2: una secuela más centrada en corregir problemas que en volver
-              a enamorar a los jugadores
-            </h3>
-            <p>
-              '¿Alguien más ha tenido un Déjà vu?' La frase de Tracer le queda que ni pintada (con
-              graffiti) a Overwatch 2, porque no es una nueva entrega. Y da igual lo que ponga en su
-              logotipo. Ahora bien, tampoco se trata de una actualización cualquiera: es un reinicio
-              del mismo juego que nos obsesionó en 2016. Un reseteo en el que buena parte de la
-              esencia del original ha quedado diluida, pese a que ningún contenido anterior se
-              pierde por el camino. Bueno, sí, algo se pierde: ya no hay cajas de botín porque ahora
-              hay un pase de batalla.
-            </p>
-            <div class="lastestNews__box__footer">
-              <i class="fa-regular fa-eye"></i>
-              <span>1850</span>
-              <span class="lastestNews__divider"></span>
+        <div class="lastestNews__containerMain">
+          <div class="trendingGames__header">
+            <div class="title">
+              <span class="title__divider"></span>
+              <h3>Noticias</h3>
+            </div>
+            <div class="trendingGames__header__btn">
+              <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-chevron-right"></i>
             </div>
           </div>
-          <div class="lastestNews__box">
-            <h3>
-              El remake de Resident Evil 4 incluye más novedades aparte del cambio gráfico y esta
-              comparativa con el original lo demuestra
-            </h3>
-            <p>
-              Todavía seguimos recuperándonos de lo impactados que nos dejó el nuevo tráiler y el
-              gameplay del remake de Resident Evil 4 que ha publicado Capcom en las últimas horas,
-              con los que hemos podido apreciar el cambio tan significativo que ha pegado el juego
-              en su apartado gráfico, hasta el punto de parecer un título totalmente nuevo.
-            </p>
-            <div class="lastestNews__box__footer">
-              <i class="fa-regular fa-eye"></i>
-              <span>3310</span>
-              <span class="lastestNews__divider"></span>
+          <div class="lastestNews__container">
+            <div class="lastestNews__box">
+              <h3>
+                Análisis de Overwatch 2: una secuela más centrada en corregir problemas que en volver
+                a enamorar a los jugadores
+              </h3>
+              <p>
+                '¿Alguien más ha tenido un Déjà vu?' La frase de Tracer le queda que ni pintada (con
+                graffiti) a Overwatch 2, porque no es una nueva entrega. Y da igual lo que ponga en su
+                logotipo. Ahora bien, tampoco se trata de una actualización cualquiera: es un reinicio
+                del mismo juego que nos obsesionó en 2016. Un reseteo en el que buena parte de la
+                esencia del original ha quedado diluida, pese a que ningún contenido anterior se
+                pierde por el camino. Bueno, sí, algo se pierde: ya no hay cajas de botín porque ahora
+                hay un pase de batalla.
+              </p>
+              <div class="lastestNews__box__footer">
+                <i class="fa-regular fa-eye"></i>
+                <span>1850</span>
+                <span class="lastestNews__divider"></span>
+              </div>
             </div>
-          </div>
-          <div class="lastestNews__box">
-            <h3>
-              Resumen del Silent Hill Transmission con todos los vídeos y anuncios: Silent Hill 2
-              Remake, Return to Silent Hill y más
-            </h3>
-            <p>
-              ¿Echabas de menos Silent Hill? Tenemos muy buenas noticias: Konami acaba de coronar la
-              víspera de Halloween con cinco grandes anuncios relacionados con su saga de terror
-              psicológico. Nada menos que tres nuevos juegos, una película y hasta el largamente
-              rumoreado (y filtrado) remake del mejor título de toda la franquicia. Ahí es nada.
-            </p>
-            <div class="lastestNews__box__footer">
-              <i class="fa-regular fa-eye"></i>
-              <span>8640</span>
-              <span class="lastestNews__divider"></span>
+            <div class="lastestNews__box">
+              <h3>
+                El remake de Resident Evil 4 incluye más novedades aparte del cambio gráfico y esta
+                comparativa con el original lo demuestra
+              </h3>
+              <p>
+                Todavía seguimos recuperándonos de lo impactados que nos dejó el nuevo tráiler y el
+                gameplay del remake de Resident Evil 4 que ha publicado Capcom en las últimas horas,
+                con los que hemos podido apreciar el cambio tan significativo que ha pegado el juego
+                en su apartado gráfico, hasta el punto de parecer un título totalmente nuevo.
+              </p>
+              <div class="lastestNews__box__footer">
+                <i class="fa-regular fa-eye"></i>
+                <span>3310</span>
+                <span class="lastestNews__divider"></span>
+              </div>
+            </div>
+            <div class="lastestNews__box">
+              <h3>
+                Resumen del Silent Hill Transmission con todos los vídeos y anuncios: Silent Hill 2
+                Remake, Return to Silent Hill y más
+              </h3>
+              <p>
+                ¿Echabas de menos Silent Hill? Tenemos muy buenas noticias: Konami acaba de coronar la
+                víspera de Halloween con cinco grandes anuncios relacionados con su saga de terror
+                psicológico. Nada menos que tres nuevos juegos, una película y hasta el largamente
+                rumoreado (y filtrado) remake del mejor título de toda la franquicia. Ahí es nada.
+              </p>
+              <div class="lastestNews__box__footer">
+                <i class="fa-regular fa-eye"></i>
+                <span>8640</span>
+                <span class="lastestNews__divider"></span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <div class="dividerComments">
-        <div class="dividerSeparator__containerPj">
-          <img src="./assets/comments/faker.png" class="dividerComments__pjLeft" />
-        </div>
-        <div class="dividerComments__container">
-          <div class="commentsRating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+        <div class="dividerComments__containerMain">
+          <div class="dividerSeparator__containerPj">
+            <img src="./assets/comments/faker.png" class="dividerComments__pjLeft" />
           </div>
-          <div class="dividerComments__box">
-            <p>
-              GamesBA es una excelente forma de obtener juegos más baratos, al mismo tiempo que
-              apoyas a los desarrolladores. Fue rápido, pude pagar con PayPal y obtuve el código
-              inmediatamente después del pago.
-            </p>
-            <h3>Faker, jugador profesional eSports y partner de GamesBA.</h3>
-            <button>1,690,502 comentarios de usuarios</button>
+          <div class="dividerComments__container">
+            <div class="commentsRating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="dividerComments__box">
+              <p>
+                GamesBA es una excelente forma de obtener juegos más baratos, al mismo tiempo que
+                apoyas a los desarrolladores. Fue rápido, pude pagar con PayPal y obtuve el código
+                inmediatamente después del pago.
+              </p>
+              <h3>Faker, jugador profesional eSports y partner de GamesBA.</h3>
+              <button>1,690,502 comentarios de usuarios</button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="comments__container">
-        <div class="comments__box">
-          <div class="comments__header">
-            <img src="./assets/comments/icon1.png" alt="user 1" />
-            <div class="header__box">
-              <div class="comments__rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+        <div class="comments__container__main">
+          <div class="comments__box">
+            <div class="comments__header">
+              <img src="./assets/comments/icon1.png" alt="user 1" />
+              <div class="header__box">
+                <div class="comments__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>Resident evil Village</h3>
               </div>
-              <h3>Resident evil Village</h3>
+            </div>
+            <div class="comments__body">
+              <p>
+                La mejor oferta para tener la saga completa!. Me encanto esta ultima entrega. Tremendo
+                juego.
+              </p>
+              <span class="comments__footer">Hace 1 hora</span>
             </div>
           </div>
-          <div class="comments__body">
-            <p>
-              La mejor oferta para tener la saga completa!. Me encanto esta ultima entrega. Tremendo
-              juego.
-            </p>
-            <span class="comments__footer">Hace 1 hora</span>
-          </div>
-        </div>
-        <div class="comments__box">
-          <div class="comments__header">
-            <img src="./assets/comments/icon2.png" alt="user 2" />
-            <div class="header__box">
-              <div class="comments__rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+          <div class="comments__box">
+            <div class="comments__header">
+              <img src="./assets/comments/icon2.png" alt="user 2" />
+              <div class="header__box">
+                <div class="comments__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>Phasmophobia</h3>
               </div>
-              <h3>Phasmophobia</h3>
+            </div>
+            <div class="comments__body">
+              <p>
+                El juego es bastante divertido en si, más cuando juegas con amigos. Como siempre un
+                excelente servicio.
+              </p>
+              <span class="comments__footer">Hace 3 horas</span>
             </div>
           </div>
-          <div class="comments__body">
-            <p>
-              El juego es bastante divertido en si, más cuando juegas con amigos. Como siempre un
-              excelente servicio.
-            </p>
-            <span class="comments__footer">Hace 3 horas</span>
-          </div>
-        </div>
-        <div class="comments__box">
-          <div class="comments__header">
-            <img src="./assets/comments/icon3.png" alt="user 3" />
-            <div class="header__box">
-              <div class="comments__rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+          <div class="comments__box">
+            <div class="comments__header">
+              <img src="./assets/comments/icon3.png" alt="user 3" />
+              <div class="header__box">
+                <div class="comments__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>Overwatch 2</h3>
               </div>
-              <h3>Overwatch 2</h3>
+            </div>
+            <div class="comments__body">
+              <p>Nunca falla. Rápido y fiable 100%</p>
+              <span class="comments__footer">Hace 3 horas</span>
             </div>
           </div>
-          <div class="comments__body">
-            <p>Nunca falla. Rápido y fiable 100%</p>
-            <span class="comments__footer">Hace 3 horas</span>
-          </div>
-        </div>
-        <div class="comments__box">
-          <div class="comments__header">
-            <img src="./assets/comments/icon4.png" alt="user 4" />
-            <div class="header__box">
-              <div class="comments__rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+          <div class="comments__box">
+            <div class="comments__header">
+              <img src="./assets/comments/icon4.png" alt="user 4" />
+              <div class="header__box">
+                <div class="comments__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>Rust</h3>
               </div>
-              <h3>Rust</h3>
+            </div>
+            <div class="comments__body">
+              <p>Como siempre de 10, nunca me ha fallado un código y las ofertas son increibles.</p>
+              <span class="comments__footer">Hace 6 horas</span>
             </div>
           </div>
-          <div class="comments__body">
-            <p>Como siempre de 10, nunca me ha fallado un código y las ofertas son increibles.</p>
-            <span class="comments__footer">Hace 6 horas</span>
-          </div>
-        </div>
-        <div class="comments__box">
-          <div class="comments__header">
-            <img src="./assets/comments/icon5.png" alt="user 5" />
-            <div class="header__box">
-              <div class="comments__rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+          <div class="comments__box">
+            <div class="comments__header">
+              <img src="./assets/comments/icon5.png" alt="user 5" />
+              <div class="header__box">
+                <div class="comments__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>Project zomboid</h3>
               </div>
-              <h3>Project zomboid</h3>
             </div>
-          </div>
-          <div class="comments__body">
-            <p>Muy buen juego, recomendado 10/10 para jugar con amigos.</p>
-            <span class="comments__footer">Hace 8 horas</span>
+            <div class="comments__body">
+              <p>Muy buen juego, recomendado 10/10 para jugar con amigos.</p>
+              <span class="comments__footer">Hace 8 horas</span>
+            </div>
           </div>
         </div>
       </div>
 
       <section id="newsletter" class="dividerSeparator newsletterBackgroundImg">
-        <div class="newsletter__container">
-          <div>
-            <h3>
-              ¡Sé el primero en recibir nuestras ofertas privadas, newsletters y promociones de la
-              semana!
-            </h3>
-            <h3>
-              ¡No te pierdas ninguna <span class="header__title--span">oferta</span> o
-              <span class="header__title--span">promoción</span>!
-            </h3>
+        <div class="dividerSeparator__container__main">
+          <div class="newsletter__container">
+            <div>
+              <h3>
+                ¡Sé el primero en recibir nuestras ofertas privadas, newsletters y promociones de la
+                semana!
+              </h3>
+              <h3>
+                ¡No te pierdas ninguna <span class="header__title--span">oferta</span> o
+                <span class="header__title--span">promoción</span>!
+              </h3>
+            </div>
+            <div class="newsletter__input">
+              <input type="text" placeholder="E-mail" />
+              <button>¡Suscríbete!</button>
+            </div>
           </div>
-          <div class="newsletter__input">
-            <input type="text" placeholder="E-mail" />
-            <button>¡Suscríbete!</button>
-          </div>
+          <img src="./assets/jettMod.png" alt="Jett" class="dividerSeparator__pj" />
         </div>
-        <img src="./assets/jettMod.png" alt="Jett" class="dividerSeparator__pj" />
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__container">
-        <h1 class="header__title footer__title"><a href="./index.html"
-          >
-            Games<span class="header__title--span">BA</a
-              ></span>
-          </h1>
-        <div class="footer__container__column">
-          <h3>GamesBA</h3>
-          <ul>
-            <li>Metodos de pago</li>
-            <li>Soporte técnico</li>
-            <li>Términos de servicio</li>
-          </ul>
+      <div class="footer__containerMain">
+        <div class="footer__container">
+          <h1 class="header__title footer__title"><a href="./index.html"
+            >
+              Games<span class="header__title--span">BA</a
+                ></span>
+            </h1>
+          <div class="footer__container__column">
+            <h3>GamesBA</h3>
+            <ul>
+              <li>Metodos de pago</li>
+              <li>Soporte técnico</li>
+              <li>Términos de servicio</li>
+            </ul>
+          </div>
+          <div class="footer__container__column">
+            <h3>Información</h3>
+            <ul>
+              <li>Sobre nosotros</li>
+              <li>Como comprar</li>
+              <li>Sistema de reembolsos</li>
+            </ul>
+          </div>
+          <div class="footer__container__column">
+            <h3>Contacto</h3>
+            <ul>
+              <li>+054 1122334455</li>
+              <li>Ventas@gameBA.com.ar</li>
+              <li>Atencionclientes@gameBA.com.ar</li>
+            </ul>
+          </div>
+          <div class="footer__container__socialMedia">
+            <div class="socialMedia__container">
+              <img src="./assets/icons/iconFB.svg" class="socialMediaIcon" />
+            </div>
+            <div class="socialMedia__container">
+              <img src="./assets/icons/iconIG.svg" class="socialMediaIcon" />
+            </div>
+            <div class="socialMedia__container">
+              <img src="./assets/icons/iconTwitter.svg" class="socialMediaIcon" />
+            </div>
+            <div class="socialMedia__container">
+              <img src="./assets/icons/iconYT.svg" class="socialMediaIcon" />
+            </div>
+            <div class="socialMedia__container">
+              <img src="./assets/icons/iconTwitch.svg" class="socialMediaIcon" />
+            </div>
+            <div class="socialMedia__container">
+              <img src="./assets/icons/iconDs.svg" class="socialMediaIcon" />
+            </div>
+          </div>
         </div>
-        <div class="footer__container__column">
-          <h3>Información</h3>
-          <ul>
-            <li>Sobre nosotros</li>
-            <li>Como comprar</li>
-            <li>Sistema de reembolsos</li>
-          </ul>
-        </div>
-        <div class="footer__container__column">
-          <h3>Contacto</h3>
-          <ul>
-            <li>+054 1122334455</li>
-            <li>Ventas@gameBA.com.ar</li>
-            <li>Atencionclientes@gameBA.com.ar</li>
-          </ul>
-        </div>
-        <div class="footer__container__socialMedia">
-          <div class="socialMedia__container">
-            <img src="./assets/icons/iconFB.svg" class="socialMediaIcon" />
-          </div>
-          <div class="socialMedia__container">
-            <img src="./assets/icons/iconIG.svg" class="socialMediaIcon" />
-          </div>
-          <div class="socialMedia__container">
-            <img src="./assets/icons/iconTwitter.svg" class="socialMediaIcon" />
-          </div>
-          <div class="socialMedia__container">
-            <img src="./assets/icons/iconYT.svg" class="socialMediaIcon" />
-          </div>
-          <div class="socialMedia__container">
-            <img src="./assets/icons/iconTwitch.svg" class="socialMediaIcon" />
-          </div>
-          <div class="socialMedia__container">
-            <img src="./assets/icons/iconDs.svg" class="socialMediaIcon" />
-          </div>
-        </div>
+        <div class="footer__divider"></div>
+        <p class="footer__text">Copyright © 2022 Gamestore | Todos los derechos reservados</p>
       </div>
-      <div class="footer__divider"></div>
-      <p class="footer__text">Copyright © 2022 Gamestore | Todos los derechos reservados</p>
     </footer>
   </body>
 </html>

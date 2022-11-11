@@ -240,9 +240,6 @@
     padding: 2em 4em;
     /* border: 1px solid red; */
   }
-  .login__containerBtn{
-    margin-right: 4em;
-  }
   .hero {
     padding: 0 4em;
   }
@@ -309,9 +306,6 @@
   .header{
     padding: 2em;
     /* border: 1px solid red; */
-  }
-  .login__containerBtn{
-    margin-right: 2em;
   }
   .hero {
     padding: 0 2em;
@@ -412,6 +406,9 @@
   #menuToggle, .menuLabel{
     display: none;
   }
+  .header{
+    background-color: var(--backgroundBox);
+  }
   .menuLabel {
     display: flex;
     cursor: pointer;
@@ -436,6 +433,7 @@
     border-top: 1px solid var(--box);
     padding: 20px 0;
     gap: 20px;
+    
   }
   .navList a {
     font-size: 24px;

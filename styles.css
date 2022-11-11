@@ -28,18 +28,34 @@ html {
   scroll-behavior: smooth;
 }
 
+/* main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
 .header{
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  background-color: var(--backgroundBox);
+  justify-content: center;
+  background-color: transparent;
   /*Sin el background color se ve más lindo, pero al bajar se hace indistinguible :(*/
   padding: 2em 8em;
   position: fixed;
   height: 90px;
   z-index: 40;
   /* border: 1px solid red; */
+  backdrop-filter: blur(5px);
 }
+
+.header__container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+
 #menuToggle, .menuLabel{
   display: none;
 }
@@ -104,7 +120,6 @@ html {
   display: flex;
   flex-direction: column;
   width: 200px;
-  margin-right: 8em;
   text-align: center;
   z-index: 10;
   display: none;
@@ -193,6 +208,16 @@ html {
   z-index: 30;
   animation: backgroundpan 10s linear infinite;
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 8em;
+}
+
+.landing__container{
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  display: flex;
 }
 
 @keyframes backgroundpan {
@@ -213,7 +238,7 @@ html {
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  padding: 0 8em;
+
   gap: 1em;
 }
 
@@ -271,8 +296,15 @@ html {
 #trendingGames{
   padding: 6em 8em 0 8em;
   display: flex;
+  justify-content: center;
+}
+
+.trandingGames__container{
+  display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .trendingGames__header{
@@ -423,9 +455,17 @@ html {
   background-color: var(--backgroundBox);
   padding: 0 8em;
   display: flex;
-  position: relative;
   height: 200px;
   margin-top: 6em;
+  justify-content: center;
+}
+
+.dividerSeparator__container__main{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
 }
 
 .dividerSeparator__pj{
@@ -433,7 +473,6 @@ html {
   bottom: 0;
   right: 0;
   height: 260px;
-  padding-right: 8em;
 }
 
 .dividerSeparator__container{
@@ -491,8 +530,16 @@ html {
 #inComing{
   padding: 6em 8em 2em 8em;
   display: flex;
+  justify-content: center;
+  
+}
+
+.inComing__container{
+  display: flex;
   flex-direction: column;
   gap: 1em;
+  max-width: 1920px;
+  width: 100%;
 }
 
 .dividerSeparator__pjLeft{
@@ -500,7 +547,6 @@ html {
   bottom: 0;
   left: 0;
   height: 260px;
-  padding-left: 8em;
 }
 .dividerSeparator__containerPj{
   width: 400px;
@@ -538,8 +584,15 @@ html {
 #popularCategories{
   padding: 6em 8em 0 8em;
   display: flex;
+  justify-content: center;
+}
+
+.popularCategories__container{
+  display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .trendingGames__header button{
@@ -659,8 +712,15 @@ html {
 #lastestNews{
   padding: 6em 8em 2em 8em;
   display: flex;
+  justify-content: center;
+}
+
+.lastestNews__containerMain{
+  display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .lastestNews__container{
@@ -750,6 +810,14 @@ html {
   position: relative;
   height: 400px;
   margin-top: 4em;
+  justify-content: center;
+}
+
+.dividerComments__containerMain{
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  position: relative;
 }
 
 .dividerComments__pjLeft{
@@ -757,7 +825,6 @@ html {
   bottom: 0;
   left: 0;
   height: 380px;
-  padding-left: 8em;
 }
 
 .dividerComments__container{
@@ -770,6 +837,7 @@ html {
   text-align: center;
   padding: 2em;
   gap: 2em;
+  z-index: 5;
 }
 
 .dividerComments__box{
@@ -815,9 +883,16 @@ html {
 .comments__container{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2em 4em 0 4em;
   align-items: center;
+}
+
+.comments__container__main{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
 }
 
 .comments__box{
@@ -952,6 +1027,16 @@ html {
   padding: 2em 8em;
   background-color: var(--backgroundBox);
   text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__containerMain{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
 }
 
 .footer__container{
