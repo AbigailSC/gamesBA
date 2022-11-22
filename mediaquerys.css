@@ -582,6 +582,17 @@
     width: 100%;
     padding: 0 2em;
   }
+  .registerContainer{
+    height: 100%;
+  }
+  #loginContainer{
+    background-image: none;
+    height: calc(100vh - 90px);
+  }
+  #registerContainer{
+    background-image: none;
+    height: calc(100vh - 90px);
+  }
 }
 
 @media (max-width:400px){
@@ -613,4 +624,8 @@
   #landing{
     height: 90vh;
   }
+  .registerContainer__box{
+    margin-top: 0;
+  }
+  
 }
