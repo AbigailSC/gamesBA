@@ -28,12 +28,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 @keyframes bounce {
   0% {
     transform:translateY(0px);  
@@ -43,9 +37,7 @@ html {
   }
 }
 
-
-
-.shopCart__btn{
+.cart__bubble{
   position: fixed;
   bottom: 0;
   right: 0;
@@ -58,12 +50,12 @@ html {
   cursor: pointer;
 }
 
-.shopCart__btn:hover{
+.cart__bubble:hover{
   background-color: var(--textDegradatePrimeryHover);
   animation: bounce 0.5s infinite alternate;
 }
 
-.shopCart__btn__icon{
+.cart__bubble__icon{
   font-size: 1.5em;
 }
 
@@ -470,6 +462,7 @@ html {
   color: var(--textPrimary);
   transition: .3s ease-in-out;
   cursor: pointer;
+  font-size: 1.25em;
 }
 
 .container__icon:hover{
@@ -478,6 +471,11 @@ html {
 
 .container__icon:active{
   transform: scale(0.9);
+}
+
+.header__icon{
+  background-color: transparent;
+  border: none;
 }
 
 /* divider */
