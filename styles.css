@@ -372,6 +372,17 @@ html {
   
 }
 
+.title span {
+  background: linear-gradient(180deg, var(--textDegradatePrimary), var(--textDegradateSecundary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.filterBy{
+  margin: 2em 0;
+}
+
 .cardTrending{
   display: flex;
   width: 100%;

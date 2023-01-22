@@ -76,7 +76,7 @@ const applyFilter = (e) => {
     products.innerHTML = "";
     renderProducts();
   } else {
-    titleFilteredBy.innerHTML = `Juegos filtrados por ${e.target.dataset.category}`;
+    titleFilteredBy.innerHTML = `Juegos filtrados por <span>${e.target.dataset.category}</span>`;
     renderProducts(e.target.dataset.category);
   }
 };
