@@ -34,6 +34,39 @@ html {
   align-items: center;
 } */
 
+@keyframes bounce {
+  0% {
+    transform:translateY(0px);  
+  }
+  100% {
+    transform:translateY(-8px);
+  }
+}
+
+
+
+.shopCart__btn{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  margin: 2em;
+  background-color: var(--textDegradatePrimary);
+  padding: 1.5em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.shopCart__btn:hover{
+  background-color: var(--textDegradatePrimeryHover);
+  animation: bounce 0.5s infinite alternate;
+}
+
+.shopCart__btn__icon{
+  font-size: 1.5em;
+}
+
 .header{
   width: 100%;
   display: flex;
@@ -639,6 +672,11 @@ html {
   padding-left: 2em;
 }
 
+.popularCategories__card__container:hover img{
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
 .popularCategories__card__container img{
   position: absolute;
   height: 260px;
@@ -649,10 +687,10 @@ html {
   transform-origin: right bottom;
 }
 
-.popularCategories__card__container img:hover{
+/* .popularCategories__card__container img:hover{
   -webkit-transform: scale(1.1);
 	transform: scale(1.1);
-}
+} */
 
 .popularCategories__card__container:nth-child(2){
   background-image: url("./assets/categories/survivalbackground.png");
