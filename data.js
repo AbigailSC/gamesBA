@@ -1,7 +1,7 @@
 const gamesData = [
   {
     id: 1,
-    name: 'Super Mario Bros.',
+    name: 'Super Mario Bros2',
     price: 6800,
     image: '',
     category: 'Acción'
@@ -43,7 +43,7 @@ const gamesData = [
   },
   {
     id: 7,
-    name: 'Super Mario Bros.',
+    name: 'Super Mario Bros2',
     price: 6800,
     image: '',
     category: 'Aventura'
@@ -85,7 +85,7 @@ const gamesData = [
   },
   {
     id: 13,
-    name: 'Super Mario Bros.',
+    name: 'Super Mario Bros3',
     price: 6800,
     image: '',
     category: 'Supervivencia'

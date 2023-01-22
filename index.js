@@ -1,12 +1,14 @@
-const products = document.querySelector(".trandingGames__container")
+const products = document.querySelector(".containerResults")
 
 const productsCart = document.querySelector(".cart__container")
 
 const totalPrice = document.querySelector(".total")
 
-const categories = document.querySelector(".popularCategories__card")
+const categories = document.querySelector(".categories")
 
-const categoriesList = document.querySelector(".popularCategories__card__container")
+const categoriesList = document.querySelector(".category")
+
+const titleFilteredBy = document.querySelector(".filterBy")
 
 const btnBuy = document.querySelector(".container__footer")
 
@@ -32,37 +34,56 @@ const saveCart = (cartList) => localStorage.setItem("cart", JSON.stringify(cartL
 
 const renderProduct = (product) => {
   const { name, price, image, id } = product
-  return
-  `
-  <div class="cardTrending__container">
-    <div class="container__zoom">
-      <img src="${image}" alt="${name}" />
+  return `
+    <div class="cardTrending__container">
+      <div class="container__zoom">
+        <img src="${image}" alt="${name}" />
+      </div>
+      <div class="container__header">
+        <h3>${name}</h3>
+        <button
+          class="header__icon"
+          data-id=${id} 
+          data-name=${name} 
+          data-price=${price} 
+          data-image=${image}
+        >
+        <i class="fa-solid fa-heart container__icon"></i>
+        </button>
+      </div>
+      <div class="container__footer">
+        <h3>$${price}</h3>
+      </div>
     </div>
-    <div class="container__header">
-      <h3>${name}</h3>
-      <button class="header__icon" data-id=${id} data-name=${name} data-price=${price} data-image=${image}>
-      <i class="fa-solid fa-heart container__icon"></i>
-      </button>
-    </div>
-    <div class="container__footer">
-      <h3>$${price}</h3>
-    </div>
-  </div>
   `
 }
 
-const filterProducts = (category) => {
-  return gamesData.filter((product) => product.category === category)
+const renderFilterProducts = (category) => {
+  const productsFiltered = gamesData.filter((product) => product.category === category)
+  products.innerHTML = productsFiltered.map(renderProduct).join("")
 }
 
 const renderProducts = (category = undefined) => {
-  if (!category) {
-
-  }
+  if (!category) return
+  renderFilterProducts(category)
 }
 
-const init = () => {
+const applyFilter = (e) => {
+  if (!e.target.classList.contains("category")) {
+    return;
+  }
+  if (!e.target.dataset.category) {
+    products.innerHTML = "";
+    renderProducts();
+  } else {
+    titleFilteredBy.innerHTML = `Juegos filtrados por ${e.target.dataset.category}`;
+    renderProducts(e.target.dataset.category);
+  }
+};
 
+const init = () => {
+  renderProducts();
+  categories.addEventListener("click", applyFilter);
 }
 
 init()
