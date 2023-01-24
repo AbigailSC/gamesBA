@@ -400,12 +400,6 @@
 }
 
 @media (max-width:644px){
-  #menuToggle:checked + .navList {
-    display: flex;
-  }
-  #menuToggle, .menuLabel{
-    display: none;
-  }
   .header{
     background-color: var(--backgroundBox);
     position: relative;
@@ -424,6 +418,7 @@
     justify-content: center;
     padding: 4px;
     border-radius: 12px;
+    order: 2
   }
   .menuLabel:hover{
     background-color: rgba(130, 146, 165, 0.3);
@@ -443,9 +438,13 @@
     gap: 20px;
     width: 100vw;
   }
+  .openMenu {
+    display: flex;
+  }
   .navList a {
     font-size: 24px;
   }
+  
   .menuIcon{
     width: 32px;
     height: 32px;

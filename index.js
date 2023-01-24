@@ -1,6 +1,6 @@
 const products = document.querySelector(".containerResults")
 
-const productsCart = document.querySelector(".cart__container")
+const productsCart = document.querySelector(".cartContainer")
 
 const totalPrice = document.querySelector(".total")
 
@@ -10,23 +10,25 @@ const categoriesList = document.querySelector(".category")
 
 const titleFilteredBy = document.querySelector(".filterBy")
 
-const btnBuy = document.querySelector(".container__footer")
+const btnBuy = document.querySelector(".btnBuy")
 
-const cartBubble = document.querySelector(".cart__bubble")
+const cartBtn = document.querySelector(".cart__bubble")
 
-const cartBtn = document.querySelector(".cart__label")
-
-const navBtn = document.querySelector(".menuLabel")
+const cartBubble = document.querySelector(".cartBubbleNumberTotal")
 
 const cartMenu = document.querySelector(".cart")
 
-const navMenu = document.querySelector(".navbarList")
+const navBtn = document.querySelector(".menuLabel")
 
-const overlay = document.querySelector(".overlay")
+const navMenu = document.querySelector(".navList")
 
 const successModal = document.querySelector(".addModal")
 
-const deleteBtn = document.querySelector(".deleteBtn")
+const deleteBtn = document.querySelector(".btnDelete")
+
+const divider = document.querySelector(".dividerCartContainer")
+
+const cartTotal = document.querySelector(".cartTotal")
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
@@ -81,9 +83,125 @@ const applyFilter = (e) => {
   }
 };
 
+const toggleMenu = () => {
+  navMenu.classList.toggle("openMenu");
+  if (cartMenu.classList.contains("openCart")) {
+    cartMenu.classList.remove("openCart");
+    return;
+  }
+};
+
+const toggleCart = () => {
+  cartMenu.classList.toggle("openCart");
+  if (navMenu.classList.contains("openMenu")) {
+    navMenu.classList.remove("openMenu");
+    return;
+  }
+};
+
+const closeOnClick = (e) => {
+  if (!e.target.classList.contains("navbar__item")) {
+    return;
+  }
+  navMenu.classList.remove("openMenu");
+};
+
+const closeOnScroll = () => {
+  if (
+    !navMenu.classList.contains("openMenu") &&
+    !cartMenu.classList.contains("openCart")
+  ) {
+    return;
+  }
+  navMenu.classList.remove("openMenu");
+  cartMenu.classList.remove("openCart");
+};
+
+const renderCartProduct = (cartProduct) => {
+  const { price, id, name, image, quantity } = cartProduct
+  return `
+    <div>
+      <img src="${image} alt="${name}" "/>
+      <h3>${name}</h3>
+      <p>${price}</p>
+      <div>
+        <span class="quantityHandlerDown" data-id="${id}">-</span>
+        <span class="quantityItem">${quantity}</span>
+        <span class="quantityHandlerUp" data-id="${id}">+</span>
+      </div>
+    </div>
+  `
+}
+
+const renderCarts = () => {
+  if (!cart.length) {
+    productsCart.innerHTML = "<p>Ey! Todavia no hay nada en tu carrito</p>"
+    return
+  }
+  productsCart.innerHTML = cart.map(renderCartProduct).join("")
+}
+
+const getCartTotal = () => {
+  return cart.reduce((acc, { price, quantity }) => acc + Number(price) * quantity, 0)
+}
+
+const renderCartTotal = () => {
+  totalPrice.innerHTML = `$${getCartTotal().toFixed(2)}`
+}
+
+const renderCartBubble = () => {
+  cartBubble.textContent = cart.reduce((acc, { quantity }) => acc + quantity, 0)
+}
+
+const disabledBtn = (btn) => {
+  if (!cart.length) {
+    divider.classList.add("disabledBtns")
+    btn.classList.add("disabledBtns")
+    cartTotal.classList.add("disabledBtns")
+  } else {
+    divider.classList.remove("disabledBtns")
+    btn.classList.remove("disabledBtns")
+    cartTotal.classList.remove("disabledBtns")
+  }
+}
+
+const checkCartState = () => {
+  saveCart(cart)
+  renderCartBubble()
+  renderCarts()
+  renderCartTotal()
+  disabledBtn(btnBuy)
+  disabledBtn(deleteBtn)
+}
+
+const addToCart = (e) => {
+  console.log(e.target.dataset);
+  if (!e.target.classList.contains("header__icon")) {
+    return
+  }
+  const { id, name, price, image } = e.target.dataset
+  const productInCart = cart.find((product) => product.id === id)
+  if (productInCart) {
+    productInCart.quantity++
+  } else {
+    cart.push({ id, name, price, image, quantity: 1 })
+  }
+  checkCartState()
+}
+
 const init = () => {
   renderProducts();
   categories.addEventListener("click", applyFilter);
+  navBtn.addEventListener("click", toggleMenu);
+  navMenu.addEventListener("click", closeOnClick);
+  cartBtn.addEventListener("click", toggleCart);
+  window.addEventListener("scroll", closeOnScroll);
+  document.addEventListener("DOMContentLoaded", renderCarts);
+  document.addEventListener("DOMContentLoaded", renderCartTotal);
+  products.addEventListener("click", addToCart);
+  disabledBtn(btnBuy);
+  disabledBtn(deleteBtn);
+  renderCartTotal();
 }
 
 init()

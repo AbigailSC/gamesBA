@@ -29,21 +29,22 @@
           <a href="./index.html">Games<span class="header__title--span">BA</span></a>
         </h1>
         <nav>
-          <label for="menuToggle" class="menuLabel">
+          <div class="menuLabel">
             <img src="./assets/icons/menu.svg" class="menuIcon" />
-          </label>
-          <input type="checkbox" id="menuToggle" />
+          </div>
+          <!-- <input type="checkbox" id="menuToggle" /> -->
           <ul class="navList">
-            <li class="navList_item"><a href="#">Inicio</a></li>
+            <li class="navList_item"><a href="#" class="navbar__item">Inicio</a></li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#popularCategories">Categorias</a></li>
+            <li class="navList_item"><a href="#popularCategories" class="navbar__item">Categorias</a></li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#trendingGames">Tendencias</a></li>
+            <li class="navList_item"><a href="#trendingGames" class="navbar__item">Tendencias</a></li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#inComing">Pre-orden</a></li>
+            <li class="navList_item"><a href="#inComing" class="navbar__item">Pre-orden</a></li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#lastestNews">Blog</a></li>
+            <li class="navList_item"><a href="#lastestNews" class="navbar__item">Blog</a></li>
           </ul>
+          
         </nav>
         <!-- <div>
           <input type="text" placeholder="Buscar un videojuego..." />
@@ -62,9 +63,28 @@
         </div>
       </div>
     </header>
-
     <main>
-      <button class="cart__bubble"><i class="fa-solid fa-cart-shopping cart__bubble__icon"></i></button>
+
+      <button class="cart__bubble">
+        <i class="fa-solid fa-cart-shopping cart__bubble__icon">
+          <div class="cartBubbleNumberTotal">0</div>
+        </i>
+      </button>
+
+
+      <div class="cart">
+        <h2>Tus Productos</h2>
+        <span class="dividerCartContainerHeader"></span>
+        <div class="cartContainer">
+        </div>
+        <div class="cartTotal">
+          <p>Total:</p>
+          <span class="total">18.3 ETH</span>
+        </div>
+        <span class="dividerCartContainer"></span>
+        <button class="containerBtn__btn btnBuy">Comprar</button>
+        <button class="containerBtn__btn btnDelete">Limpiar carrito</button>
+      </div>
 
       <section id="landing">
         <div class="landing__container">
@@ -102,7 +122,10 @@
               </div>
               <div class="container__header">
                 <h3>A plague tale: Requiem</h3>
-                <button class="header__icon">
+                <button class="header__icon" data-id="56" 
+                data-name="A plague tale: Requiem"
+                data-price="6000"
+                data-image="./assets/trending/aplagetale.png">
                   <i class="fa-solid fa-heart container__icon"></i>
                 </button>
               </div>
@@ -657,6 +680,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer__containerMain">
         <div class="footer__container">

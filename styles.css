@@ -81,7 +81,7 @@ html {
   position: relative;
 }
 
-#menuToggle, .menuLabel{
+.menuLabel{
   display: none;
 }
 
@@ -107,28 +107,28 @@ html {
   }
 }
 
-.navList{
+.navList {
   display: flex;
   gap: 1em;
   align-items: center;
 }
 
-.navList__divider{
+.navList__divider {
   border-right: 1px solid var(--textPrimary);
   opacity: .3;
   height: 18px;
 }
 
-.navList_item{
+.navList_item {
   cursor: pointer;
   transition: 0.2s;
 }
 
-.navList_item:hover{
+.navList_item:hover {
   color: var(--textSecondary);
 }
 
-.navList_item:active{
+.navList_item:active {
   transform: scale(0.9);
 }
 
@@ -217,7 +217,7 @@ html {
   top: 0px;
   background-color: var(--backgroundBox);
   z-index: 30;
-} 
+}
 
 /*Landing*/
 
@@ -415,7 +415,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
+  
 }
 
 .container__zoom{
@@ -432,7 +432,6 @@ html {
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-
 }
 
 .container__zoom img:hover{
@@ -1382,4 +1381,72 @@ html {
 
 .registerContainer p{
   text-align: center;
+}
+
+/* cart */
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding:  32px 20px;
+  background: var(--backgroundActive);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: calc(100vh - 130px);
+  /* overflow-y: scroll; */
+  z-index: 50;
+  min-width: 375px;
+  transform: translate(200%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  margin: 2em;
+  border-radius: 2em;
+}
+
+.openCart {
+  transform: translate(0%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+.dividerCartContainer{
+  width: 100%;
+  height: 1px;
+  background-color: var(--textPrimary);
+  border-radius: 2em;
+}
+
+.dividerCartContainerHeader{
+  width: 100%;
+  height: 1px;
+  background-color: var(--textPrimary);
+  border-radius: 2em;
+}
+
+.cartBubbleNumberTotal {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  text-align: center;
+  background: var(--textDegradateSecundary);
+  color: var(--textPrimary);
+  font-size: 10px;
+  font-weight: 500;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.disabledBtns {
+  display: none;
+}
+
+.cartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
