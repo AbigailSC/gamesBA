@@ -34,9 +34,53 @@ const divider = document.querySelector(".dividerCartContainer")
 
 const cartTotal = document.querySelector(".cartTotal")
 
+const containerImagesSlider = document.querySelector("#landing")
+
+const heroTitle = document.querySelector(".hero__title")
+
+const overview = document.querySelector(".hero__overview")
+
+containerImagesSlider.style.backgroundImage = `url(../assets/silentHill2Remake.jpg)`;
+heroTitle.innerHTML = "Silent Hill 2";
+overview.innerHTML = `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
+allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
+especial" esperándote...”.`;
+
+const imagesBackgroundArray = [
+  "../assets/diablo4.jpg",
+  "https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/capsule_616x353.jpg?t=1661963377",
+  "../assets/Resident-Evil-4-Remake.jpg",
+  "../assets/silentHill2Remake.jpg"
+]
+
+const titleArray = [
+  "Diablo 4",
+  "Songs of the forrest",
+  "Resident Evil 2 Remake",
+  "Silent Hill 2"
+]
+
+const overviewArray = [
+  "Diablo IV es un videojuego de rol de acción desarrollado por Blizzard Entertainment y es la cuarta entrega de la saga Diablo. Fue anunciado el 19 de noviembre de 2019 durante la BlizzCon 2019.",
+  "Songs of the forest es un videojuego de terror y supervivencia en primera persona desarrollado por el estudio independiente español The Game Kitchen. El juego se lanzó en Steam el 28 de octubre de 2020.",
+  "Resident Evil 2 Remake es un videojuego de acción-aventura de supervivencia en tercera persona desarrollado y publicado por Capcom. Es una remasterización del videojuego de 1998 Resident Evil 2, y es la segunda entrega de la saga Resident Evil que se remasteriza.",
+  `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
+allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
+especial" esperándote...”.`
+]
+
+let sliderIndex = 0;
+
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 const saveCart = (cartList) => localStorage.setItem("cart", JSON.stringify(cartList))
+
+const changeBackgroundImage = () => {
+  containerImagesSlider.style.backgroundImage = `url(${imagesBackgroundArray[sliderIndex]})`
+  heroTitle.innerHTML = `${titleArray[sliderIndex]}`
+  overview.innerHTML = `${overviewArray[sliderIndex]}`
+  sliderIndex = (sliderIndex + 1) % imagesBackgroundArray.length
+}
 
 const renderProduct = (product) => {
   const { name, price, image, id } = product
@@ -207,6 +251,7 @@ const addToCart = (e) => {
 }
 
 const init = () => {
+  setInterval(changeBackgroundImage, 4000);
   renderProducts();
   categories.addEventListener("click", applyFilter);
   navBtn.addEventListener("click", toggleMenu);
@@ -221,6 +266,7 @@ const init = () => {
   disabledBtn(btnBuy);
   disabledBtn(deleteBtn);
   renderCartTotal();
+
 }
 
 init()
