@@ -175,11 +175,10 @@ const checkCartState = () => {
 }
 
 const addToCart = (e) => {
-  console.log(e.target.dataset);
-  if (!e.target.classList.contains("header__icon")) {
+  if (!e.target.parentElement.classList.contains("header__icon")) {
     return
   }
-  const { id, name, price, image } = e.target.dataset
+  const { id, name, price, image } = e.target.parentElement.dataset
   const productInCart = cart.find((product) => product.id === id)
   if (productInCart) {
     productInCart.quantity++
