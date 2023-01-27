@@ -121,7 +121,7 @@ const renderCartProduct = (cartProduct) => {
   const { price, id, name, image, quantity } = cartProduct
   return `
     <div>
-      <img src="${image} alt="${name}" "/>
+      <img src="${image}" alt="${name}"/>
       <h3>${name}</h3>
       <p>${price}</p>
       <div>
