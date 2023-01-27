@@ -63,14 +63,13 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: transparent;
   /*Sin el background color se ve más lindo, pero al bajar se hace indistinguible :(*/
   padding: 2em 8em;
   position: fixed;
   height: 90px;
   z-index: 40;
   /* border: 1px solid red; */
-  backdrop-filter: blur(5px);
+  transition: background-color 0.4s;
 }
 
 .header__container{
@@ -235,13 +234,11 @@ html {
   display: flex;
   justify-content: center;
   padding: 0 8em;
+  transition: background-image 0.5s;
 }
 
-.landing__container{
-  width: 100%;
-  height: 100%;
-  max-width: 1920px;
-  display: flex;
+.carousel-image {
+  transition: opacity 0.5s;
 }
 
 @keyframes backgroundpan {

@@ -404,9 +404,7 @@
 
 @media (max-width:644px){
   .header{
-    background-color: transparent;
-    position: relative;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
   }
   .header__container{

@@ -40,6 +40,8 @@ const heroTitle = document.querySelector(".hero__title")
 
 const overview = document.querySelector(".hero__overview")
 
+const header = document.querySelector(".header")
+
 containerImagesSlider.style.backgroundImage = `url(../assets/silentHill2Remake.jpg)`;
 heroTitle.innerHTML = "Silent Hill 2";
 overview.innerHTML = `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
@@ -250,6 +252,14 @@ const addToCart = (e) => {
   checkCartState()
 }
 
+const changeColorBackground = () => {
+  if (document.body.scrollTop || document.documentElement.scrollTop > 240) {
+    header.style.backgroundColor = "var(--backgroundBox)";
+  } else {
+    header.style.backgroundColor = "transparent";
+  }
+}
+
 const init = () => {
   setInterval(changeBackgroundImage, 4000);
   renderProducts();
@@ -266,7 +276,7 @@ const init = () => {
   disabledBtn(btnBuy);
   disabledBtn(deleteBtn);
   renderCartTotal();
-
+  window.addEventListener("scroll", changeColorBackground)
 }
 
 init()
