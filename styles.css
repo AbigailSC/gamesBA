@@ -1442,7 +1442,6 @@ html {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: red;
 }
 
 .cartContainer {
@@ -1454,10 +1453,11 @@ html {
 }
 
 .cartContainer__product {
-  background-color: #4786E8;
   display: flex;
   width: 100%;
   gap: 1em;
+  align-items: center;
+  padding: 0.25em;
 }
 
 .cartContainer__product img {
@@ -1469,7 +1469,6 @@ html {
 
 .cartContainer__body{
   width: 100%;
-  background-color: green;
   display: flex;
   justify-content: space-between;
 }
@@ -1479,26 +1478,47 @@ html {
   flex-direction: column;
   justify-content: space-between;
   gap: 1em;
-  background-color: purple;
 }
 
 .cartContainer__header h3{
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 500;
   text-overflow: ellipsis;
 }
 
 .cartContainer__header p{
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
   color: var(--textDegradatePrimary)
 }
 
 .cartContainer__btn{
   min-width: 15%;
-  background-color: brown;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  min-width: 100px;
+}
+
+.cartContainer__btn button {
+  background-color: transparent;
+  border: 1px solid var(--textPrimary);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.cartContainer button:hover{
+  background-color: var(--textDegradatePrimary);
+}
+
+.cartContainer__btn span {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--textPrimary);
 }
 
 @keyframes slide-bottom {
@@ -1543,3 +1563,8 @@ html {
   color: var(--textDegradatePrimeryHover);
 }
 
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+}
