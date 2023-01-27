@@ -50,7 +50,7 @@ const renderProduct = (product) => {
         <button
           class="header__icon"
           data-id=${id} 
-          data-name=${name} 
+          data-name="${name}"
           data-price=${price} 
           data-image=${image}
         >
@@ -126,15 +126,15 @@ const renderCartProduct = (cartProduct) => {
   return `
     <div class="cartContainer__product">
       <img src="${image}" alt="${name}"/>
-      <div>
-        <h3>${name}</h3>
-        <div>
-          <p>${price}</p>
-          <div>
-            <span class="quantityHandlerDown" data-id="${id}">-</span>
-            <span class="quantityItem">${quantity}</span>
-            <span class="quantityHandlerUp" data-id="${id}">+</span>
-          </div>
+      <div class="cartContainer__body">
+        <div class="cartContainer__header">
+          <h3>${name}</h3>
+          <p>$${price}</p>
+        </div>
+        <div class="cartContainer__btn">
+          <button class="quantityHandlerDown" data-id="${id}">-</button>
+          <span class="quantityItem">${quantity}</span>
+          <button class="quantityHandlerUp" data-id="${id}">+</button>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@ const getCartTotal = () => {
 }
 
 const renderCartTotal = () => {
-  totalPrice.innerHTML = `$${getCartTotal().toFixed(2)}`
+  return totalPrice.innerHTML = `$${getCartTotal().toFixed(2)}`
 }
 
 const renderCartBubble = () => {
@@ -182,8 +182,15 @@ const checkCartState = () => {
   disabledBtn(deleteBtn)
 }
 
+const showSuccessModal = (message) => {
+  successModal.classList.add("showSuccessModal");
+  successModal.innerHTML = message;
+  setTimeout(() => {
+    successModal.classList.remove("showSuccessModal")
+  }, 2000)
+}
+
 const addToCart = (e) => {
-  console.log(e);
   if (!e.target.parentElement.classList.contains("header__icon")) {
     return
   }
@@ -191,8 +198,10 @@ const addToCart = (e) => {
   const productInCart = cart.find((product) => product.id === id)
   if (productInCart) {
     productInCart.quantity++
+    showSuccessModal(`<i class="fa-regular fa-circle-check"></i><p>Se agregó una unidad más al carrito</p>`)
   } else {
     cart.push({ id, name, price, image, quantity: 1 })
+    showSuccessModal(`<i class="fa-regular fa-circle-check"></i><p>Se agregó <span>${name}</span> al carrito</p>`)
   }
   checkCartState()
 }
