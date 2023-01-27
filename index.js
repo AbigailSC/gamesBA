@@ -2,6 +2,8 @@ const products = document.querySelector(".containerResults")
 
 const productsCart = document.querySelector(".cartContainer")
 
+const trendingProducts = document.querySelector(".cardTrending")
+
 const totalPrice = document.querySelector(".total")
 
 const categories = document.querySelector(".categories")
@@ -114,7 +116,7 @@ const closeOnScroll = () => {
     return;
   }
   navMenu.classList.remove("openMenu");
-  cartMenu.classList.remove("openCart");
+  // cartMenu.classList.remove("openCart");
 };
 
 const renderCartProduct = (cartProduct) => {
@@ -175,6 +177,7 @@ const checkCartState = () => {
 }
 
 const addToCart = (e) => {
+  console.log(e);
   if (!e.target.parentElement.classList.contains("header__icon")) {
     return
   }
@@ -198,6 +201,7 @@ const init = () => {
   document.addEventListener("DOMContentLoaded", renderCarts);
   document.addEventListener("DOMContentLoaded", renderCartTotal);
   products.addEventListener("click", addToCart);
+  trendingProducts.addEventListener("click", addToCart);
   disabledBtn(btnBuy);
   disabledBtn(deleteBtn);
   renderCartTotal();

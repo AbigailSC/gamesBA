@@ -1450,3 +1450,10 @@ html {
   align-items: center;
   height: 100%;
 }
+
+.cartContainer {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
