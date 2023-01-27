@@ -1449,11 +1449,28 @@ html {
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-color: red;
 }
 
 .cartContainer {
-  background-color: red;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  overflow-y: scroll;
+  height: 100%;
+
+}
+
+.cartContainer__product {
+  background-color: #4786E8;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cartContainer__product img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 1em;
 }

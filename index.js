@@ -4,6 +4,8 @@ const productsCart = document.querySelector(".cartContainer")
 
 const trendingProducts = document.querySelector(".cardTrending")
 
+const latestProducts = document.querySelector(".latestCards")
+
 const totalPrice = document.querySelector(".total")
 
 const categories = document.querySelector(".categories")
@@ -122,14 +124,18 @@ const closeOnScroll = () => {
 const renderCartProduct = (cartProduct) => {
   const { price, id, name, image, quantity } = cartProduct
   return `
-    <div>
+    <div class="cartContainer__product">
       <img src="${image}" alt="${name}"/>
-      <h3>${name}</h3>
-      <p>${price}</p>
       <div>
-        <span class="quantityHandlerDown" data-id="${id}">-</span>
-        <span class="quantityItem">${quantity}</span>
-        <span class="quantityHandlerUp" data-id="${id}">+</span>
+        <h3>${name}</h3>
+        <div>
+          <p>${price}</p>
+          <div>
+            <span class="quantityHandlerDown" data-id="${id}">-</span>
+            <span class="quantityItem">${quantity}</span>
+            <span class="quantityHandlerUp" data-id="${id}">+</span>
+          </div>
+        </div>
       </div>
     </div>
   `
@@ -202,6 +208,7 @@ const init = () => {
   document.addEventListener("DOMContentLoaded", renderCartTotal);
   products.addEventListener("click", addToCart);
   trendingProducts.addEventListener("click", addToCart);
+  latestProducts.addEventListener("click", addToCart)
   disabledBtn(btnBuy);
   disabledBtn(deleteBtn);
   renderCartTotal();
