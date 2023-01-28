@@ -42,40 +42,33 @@ const overview = document.querySelector(".hero__overview")
 
 const header = document.querySelector(".header")
 
+let sliderIndex = 0;
+
+let sliderIndexTrending = 0;
+
+const trendingPrevBtn = document.querySelector(".trendingPrevBtn")
+
+const trendingNextBtn = document.querySelector(".trendingNextBtn")
+
+let sliderIndexLatest = 0;
+
 containerImagesSlider.style.backgroundImage = `url(../assets/silenthill2vs.jpg)`;
 heroTitle.innerHTML = "Silent Hill 2";
 overview.innerHTML = `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
 allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
 especial" esperándote...”.`;
 
-const imagesBackgroundArray = [
-  "../assets/diablo4.jpg",
-  "https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/capsule_616x353.jpg?t=1661963377",
-  "../assets/Resident-Evil-4-Remake.jpg",
-  "../assets/silenthill2vs.jpg"
-]
-
-const titleArray = [
-  "Diablo 4",
-  "Songs of the forrest",
-  "Resident Evil 2 Remake",
-  "Silent Hill 2"
-]
-
-const overviewArray = [
-  "Diablo IV es un videojuego de rol de acción desarrollado por Blizzard Entertainment y es la cuarta entrega de la saga Diablo. Fue anunciado el 19 de noviembre de 2019 durante la BlizzCon 2019.",
-  "Songs of the forest es un videojuego de terror y supervivencia en primera persona desarrollado por el estudio independiente español The Game Kitchen. El juego se lanzó en Steam el 28 de octubre de 2020.",
-  "Resident Evil 2 Remake es un videojuego de acción-aventura de supervivencia en tercera persona desarrollado y publicado por Capcom. Es una remasterización del videojuego de 1998 Resident Evil 2, y es la segunda entrega de la saga Resident Evil que se remasteriza.",
-  `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
-allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
-especial" esperándote...”.`
-]
-
-let sliderIndex = 0;
-
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 const saveCart = (cartList) => localStorage.setItem("cart", JSON.stringify(cartList))
+
+
+const showPrevTrendingCard = () => {
+  sliderIndexTrending--;
+  if (currentCard < 0) {
+    currentCard = cards.length - 1;
+  }
+}
 
 const changeBackgroundImage = () => {
   containerImagesSlider.style.backgroundImage = `url(${imagesBackgroundArray[sliderIndex]})`
@@ -85,7 +78,7 @@ const changeBackgroundImage = () => {
 }
 
 const renderProduct = (product) => {
-  const { name, price, image, id } = product
+  const { name, price, olderPrice, image, id } = product
   return `
     <div class="cardTrending__container">
       <div class="container__zoom">
@@ -105,6 +98,7 @@ const renderProduct = (product) => {
       </div>
       <div class="container__footer">
         <h3>$${price}</h3>
+        ${olderPrice ? `<h3>$${olderPrice}</h3>` : ""}
       </div>
     </div>
   `
@@ -113,6 +107,14 @@ const renderProduct = (product) => {
 const renderFilterProducts = (category) => {
   const productsFiltered = gamesData.filter((product) => product.category === category)
   products.innerHTML = productsFiltered.map(renderProduct).join("")
+}
+
+const renderTrendingProducts = () => {
+  trendingProducts.innerHTML = trendingProductsArray.map(renderProduct).join("")
+}
+
+const renderLatestProduct = () => {
+  latestProducts.innerHTML = latestProductsArray.map(renderProduct).join("")
 }
 
 const renderProducts = (category = undefined) => {
@@ -254,7 +256,7 @@ const addToCart = (e) => {
 }
 
 const changeColorBackground = () => {
-  if (document.body.scrollTop || document.documentElement.scrollTop > 240) {
+  if (document.body.scrollTop || document.documentElement.scrollTop > 100) {
     header.style.backgroundColor = "var(--backgroundBox)";
   } else {
     header.style.backgroundColor = "transparent";
@@ -264,6 +266,9 @@ const changeColorBackground = () => {
 const init = () => {
   setInterval(changeBackgroundImage, 6000);
   renderProducts();
+  renderCartBubble();
+  renderTrendingProducts();
+  renderLatestProduct();
   categories.addEventListener("click", applyFilter);
   navBtn.addEventListener("click", toggleMenu);
   navMenu.addEventListener("click", closeOnClick);
@@ -278,6 +283,7 @@ const init = () => {
   disabledBtn(deleteBtn);
   renderCartTotal();
   window.addEventListener("scroll", changeColorBackground)
+  trendingPrevBtn.addEventListener("click", showPrevTrendingCard)
 }
 
 init()

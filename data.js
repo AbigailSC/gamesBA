@@ -336,3 +336,124 @@ const gamesData = [
     category: 'FPS'
   },
 ]
+
+const trendingProductsArray = [
+  {
+    id: 49,
+    name: 'A plague tale: Requiem',
+    price: 6000,
+    olderPrice: 7200,
+    image: './assets/trending/aplagetale.png',
+    category: 'Trending'
+  },
+  {
+    id: 50,
+    name: 'Bayonetta 3',
+    price: 8600,
+    image: './assets/trending/bayonetta3.png',
+    category: 'Trending'
+  },
+  {
+    id: 51,
+    name: 'Call of Duty Modern Warfare 2',
+    price: 9400,
+    image: './assets/trending/cod2.png',
+    category: 'Trending'
+  },
+  {
+    id: 52,
+    name: 'Dragon Ball: The Breakers',
+    price: 3200,
+    olderPrice: 3700,
+    image: './assets/trending/dragonball.png',
+    category: 'Trending'
+  },
+  {
+    id: 53,
+    name: 'Uncharted Legacy of Thieves Collection',
+    price: 7200,
+    olderPrice: 7900,
+    image: './assets/trending/uncharted.png',
+    category: 'Trending'
+  },
+  {
+    id: 54,
+    name: 'Fifa 23',
+    price: 8300,
+    image: './assets/trending/fifa23.png',
+    category: 'Trending'
+  },
+
+]
+
+const latestProductsArray = [
+  {
+    id: 55,
+    name: `Marvel's Spider-Man: Miles Morales`,
+    price: 6600,
+    image: './assets/news/spiderman.png',
+    category: 'Latest'
+  },
+  {
+    id: 56,
+    name: "Silent hill 2 remastered",
+    price: 7600,
+    olderPrice: 7900,
+    image: './assets/news/silenhill2.png',
+    category: 'Latest'
+  },
+  {
+    id: 57,
+    name: "Gotham Knights Deluxe Edition",
+    price: 5400,
+    olderPrice: 5900,
+    image: './assets/news/gothanknights.png',
+    category: 'Latest'
+  },
+  {
+    id: 58,
+    name: "Farming Simulator 2022",
+    price: 4400,
+    olderPrice: 4900,
+    image: './assets/news/farmingsimulator.png',
+    category: 'Latest'
+  },
+  {
+    id: 59,
+    name: "Dead Space Remake",
+    price: 5200,
+    olderPrice: 5800,
+    image: './assets/news/deadSpace.png',
+    category: 'Latest'
+  },
+  {
+    id: 60,
+    name: "Star Ocean: The Divine Force",
+    price: 6800,
+    image: './assets/news/ocean.png',
+    category: 'Latest'
+  },
+]
+
+const imagesBackgroundArray = [
+  "../assets/diablo4.jpg",
+  "https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/capsule_616x353.jpg?t=1661963377",
+  "../assets/Resident-Evil-4-Remake.jpg",
+  "../assets/silenthill2vs.jpg"
+]
+
+const titleArray = [
+  "Diablo 4",
+  "Songs of the forrest",
+  "Resident Evil 2 Remake",
+  "Silent Hill 2"
+]
+
+const overviewArray = [
+  "Diablo IV es un videojuego de rol de acción desarrollado por Blizzard Entertainment y es la cuarta entrega de la saga Diablo. Fue anunciado el 19 de noviembre de 2019 durante la BlizzCon 2019.",
+  "Songs of the forest es un videojuego de terror y supervivencia en primera persona desarrollado por el estudio independiente español The Game Kitchen. El juego se lanzó en Steam el 28 de octubre de 2020.",
+  "Resident Evil 2 Remake es un videojuego de acción-aventura de supervivencia en tercera persona desarrollado y publicado por Capcom. Es una remasterización del videojuego de 1998 Resident Evil 2, y es la segunda entrega de la saga Resident Evil que se remasteriza.",
+  `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
+allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
+especial" esperándote...”.`
+]
