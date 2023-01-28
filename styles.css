@@ -1532,6 +1532,10 @@ html {
   }
 }
 
+.hideSuccessModal{
+  display: none;
+}
+
 .showSuccessModal{
   display: flex;
   position: fixed;

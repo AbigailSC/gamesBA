@@ -233,6 +233,7 @@ const showSuccessModal = (message) => {
   successModal.innerHTML = message;
   setTimeout(() => {
     successModal.classList.remove("showSuccessModal")
+    successModal.classList.add("hideSuccessModal")
   }, 2000)
 }
 
