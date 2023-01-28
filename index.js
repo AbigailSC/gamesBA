@@ -42,7 +42,7 @@ const overview = document.querySelector(".hero__overview")
 
 const header = document.querySelector(".header")
 
-containerImagesSlider.style.backgroundImage = `url(../assets/silentHill2Remake.jpg)`;
+containerImagesSlider.style.backgroundImage = `url(../assets/silenthill2vs.jpg)`;
 heroTitle.innerHTML = "Silent Hill 2";
 overview.innerHTML = `“En mis sueños más inquietos, veo esa ciudad. Silent Hill. Prometiste volver a llevarme
 allí algún día. Pero nunca lo hiciste. Y ahora estoy aquí sola… En nuestro "lugar
@@ -52,7 +52,7 @@ const imagesBackgroundArray = [
   "../assets/diablo4.jpg",
   "https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/capsule_616x353.jpg?t=1661963377",
   "../assets/Resident-Evil-4-Remake.jpg",
-  "../assets/silentHill2Remake.jpg"
+  "../assets/silenthill2vs.jpg"
 ]
 
 const titleArray = [
@@ -262,7 +262,7 @@ const changeColorBackground = () => {
 }
 
 const init = () => {
-  setInterval(changeBackgroundImage, 4000);
+  setInterval(changeBackgroundImage, 6000);
   renderProducts();
   categories.addEventListener("click", applyFilter);
   navBtn.addEventListener("click", toggleMenu);
