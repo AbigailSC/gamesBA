@@ -263,6 +263,52 @@ const changeColorBackground = () => {
   }
 }
 
+const handleMinusQuantity = (id) => {
+  const product = cart.find((product) => product.id === id)
+  if (product.quantity === 1) {
+    cart = cart.filter((product) => product.id !== id)
+    return
+  } else {
+    subtractQuantity(product)
+  }
+  checkCartState()
+}
+
+const subtractQuantity = (product) => {
+  cart = cart.map((cartProduct) =>
+    cartProduct.id === product.id
+      ? { ...cartProduct, quantity: Number(cartProduct.quantity) - 1 }
+      : cartProduct
+  )
+}
+
+const handlePlusQuantity = (id) => {
+  const product = cart.find((product) => product.id === id)
+  sumQuantity(product)
+  checkCartState()
+}
+
+const sumQuantity = (product) => {
+  cart = cart.map((cartProduct) =>
+    cartProduct.id === product.id
+      ? { ...cartProduct, quantity: Number(cartProduct.quantity) + 1 }
+      : cartProduct
+  )
+}
+
+const handleQuantity = (e) => {
+  if (!e.target.classList.contains("quantityHandlerDown") && !e.target.classList.contains("quantityHandlerUp")) {
+    return
+  }
+  const { id } = e.target.dataset
+  if (e.target.classList.contains("quantityHandlerDown")) {
+    handleMinusQuantity(id)
+  } else {
+    handlePlusQuantity(id)
+  }
+  checkCartState()
+}
+
 const init = () => {
   setInterval(changeBackgroundImage, 6000);
   renderProducts();
@@ -284,6 +330,7 @@ const init = () => {
   renderCartTotal();
   window.addEventListener("scroll", changeColorBackground)
   trendingPrevBtn.addEventListener("click", showPrevTrendingCard)
+  productsCart.addEventListener("click", handleQuantity)
 }
 
 init()
