@@ -309,6 +309,11 @@ const handleQuantity = (e) => {
   checkCartState()
 }
 
+const handleDeleteCart = () => {
+  cart = []
+  checkCartState()
+}
+
 const init = () => {
   setInterval(changeBackgroundImage, 6000);
   renderProducts();
@@ -331,6 +336,7 @@ const init = () => {
   window.addEventListener("scroll", changeColorBackground)
   trendingPrevBtn.addEventListener("click", showPrevTrendingCard)
   productsCart.addEventListener("click", handleQuantity)
+  deleteBtn.addEventListener("click", handleDeleteCart)
 }
 
 init()
