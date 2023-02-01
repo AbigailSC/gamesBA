@@ -29,20 +29,24 @@
           <a href="./index.html">Games<span class="header__title--span">BA</span></a>
         </h1>
         <nav>
-          <label for="menuToggle" class="menuLabel">
+          <div class="menuLabel">
             <img src="./assets/icons/menu.svg" class="menuIcon" />
-          </label>
-          <input type="checkbox" id="menuToggle" />
+          </div>
+          <!-- <input type="checkbox" id="menuToggle" /> -->
           <ul class="navList">
-            <li class="navList_item"><a href="/index.html">Inicio</a></li>
+            <li class="navList_item"><a href="#" class="navbar__item">Inicio</a></li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#popularCategories">Categorias</a></li>
+            <li class="navList_item">
+              <a href="#popularCategories" class="navbar__item">Categorias</a>
+            </li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#trendingGames">Tendencias</a></li>
+            <li class="navList_item">
+              <a href="#trendingGames" class="navbar__item">Tendencias</a>
+            </li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#inComing">Pre-orden</a></li>
+            <li class="navList_item"><a href="#inComing" class="navbar__item">Pre-orden</a></li>
             <span class="navList__divider"></span>
-            <li class="navList_item"><a href="#lastestNews">Blog</a></li>
+            <li class="navList_item"><a href="#lastestNews" class="navbar__item">Blog</a></li>
           </ul>
         </nav>
         <!-- <div>
@@ -104,5 +108,7 @@
         </p>
       </div>
     </section>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
