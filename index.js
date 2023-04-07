@@ -22,6 +22,10 @@ const cartBubble = document.querySelector(".cartBubbleNumberTotal")
 
 const cartMenu = document.querySelector(".cart")
 
+const dropboxMenu = document.querySelector(".login__label")
+
+const dropboxMenuContainer = document.querySelector(".login__containerBtn")
+
 const navBtn = document.querySelector(".menuLabel")
 
 const navMenu = document.querySelector(".navList")
@@ -139,6 +143,14 @@ const toggleMenu = () => {
   navMenu.classList.toggle("openMenu");
   if (cartMenu.classList.contains("openCart")) {
     cartMenu.classList.remove("openCart");
+    return;
+  }
+};
+
+const toggleDropBox = () => {
+  dropboxMenuContainer.classList.toggle("showDropbox");
+  if (navMenu.classList.contains("openMenu")) {
+    navMenu.classList.remove("openMenu");
     return;
   }
 };
@@ -324,6 +336,7 @@ const init = () => {
   navBtn.addEventListener("click", toggleMenu);
   navMenu.addEventListener("click", closeOnClick);
   cartBtn.addEventListener("click", toggleCart);
+  dropboxMenu.addEventListener("click", toggleDropBox);
   window.addEventListener("scroll", closeOnScroll);
   document.addEventListener("DOMContentLoaded", renderCarts);
   document.addEventListener("DOMContentLoaded", renderCartTotal);
